@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #6366ff;
+  --color-brand-500: #2937ff;
+  --color-brand-600: #1124ff;
+  --color-brand-700: #0a1ce0;
+  --color-brand-800: #0a18b3;
+  --color-brand-900: #0a1480;
+  --color-brand-950: #050a4d;
+
+  --color-ink-900: #0b1020;
+  --color-ink-700: #1f2436;
+  --color-ink-500: #4b5266;
+  --color-ink-400: #6b7180;
+  --color-ink-300: #9ca3af;
+  --color-ink-200: #d1d5db;
+  --color-ink-100: #f3f4f6;
+
+  --color-surface-soft: #f7f8fc;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink-700);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+.hero-curve::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 90px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform: scaleX(1.4);
+}
+
+.rings {
+  background-image:
+    radial-gradient(circle, transparent 60px, rgba(15, 23, 42, 0.06) 61px, transparent 62px),
+    radial-gradient(circle, transparent 110px, rgba(15, 23, 42, 0.06) 111px, transparent 112px),
+    radial-gradient(circle, transparent 170px, rgba(15, 23, 42, 0.05) 171px, transparent 172px),
+    radial-gradient(circle, transparent 240px, rgba(15, 23, 42, 0.04) 241px, transparent 242px);
+}
+
+.cta-curve {
+  border-radius: 50% 50% 0 0 / 60px 60px 0 0;
+}
