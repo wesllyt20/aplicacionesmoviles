@@ -7,7 +7,6 @@ defineProps({
 
 <template>
   <div class="flex flex-col items-center text-center px-6 py-2">
-    <span class="text-3xl md:text-5xl font-extrabold text-ink-900 tracking-tight">{{ value }}</span>
-    <span class="text-sm md:text-base text-ink-500 mt-1">{{ label }}</span>
+    <span class=" text-3xl md:text-5xl font-extrabold text-ink-900 tracking-tight">{{ value }}</span>
   </div>
 </template>

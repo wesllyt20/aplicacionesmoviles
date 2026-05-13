@@ -1,77 +1,140 @@
 <script setup>
 import SectionHeading from '@/components/molecules/SectionHeading.vue'
-import FeatureItem from '@/components/molecules/FeatureItem.vue'
+import { about } from '@/data/siteContent.js'
 
-const features = [
-  {
-    icon: 'refresh',
-    title: 'Actualización Permanente',
-    description: 'Información en tiempo real sobre eventos y fenómenos geofísicos del territorio nacional emitidos por el IGP',
-    badge: 'Tiempo Real',
-    badgeTone: 'brand',
-    tone: 'brand',
-  },
-  {
-    icon: 'triangle-alert',
-    title: 'Prevención y Gestión del Riesgo',
-    description: 'Herramienta fundamental para la reducción del riesgo de desastres naturales en el país',
-    badge: 'Seguridad',
-    badgeTone: 'warning',
-    tone: 'warning',
-  },
-  {
-    icon: 'globe',
-    title: 'Acceso Universal',
-    description: 'Disponible para todos los peruanos en iOS, Huawei y Android sin costo alguno',
-    badge: 'iOS     Android',
-    badgeTone: 'brand',
-    tone: 'brand',
-  },
-]
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
   <section id="about" class="py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <SectionHeading
-        eyebrow="Acerca de #IGP"
-        title="¿Qué es el app movil institucional #IGP?"
-        description="El aplicativo institucional del IGP reúne en un solo lugar la información de todos sus servicios, de forma actualizada y confiable, para que la población, las autoridades y los profesionales se informen, prevengan riesgos y tomen decisiones oportunas."
-      />
+      <div data-animate class="animate-fade-up">
+        <SectionHeading :eyebrow="about.eyebrow" :title="about.title" :description="about.description" />
+      </div>
 
-      <div class="mt-16 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <!-- Phone with concentric rings -->
-        <div class="relative flex justify-center items-center min-h-[500px] md:min-h-[640px]">
-          <!-- Concentric circles -->
-          <div class="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full border border-ink-100/80" aria-hidden="true"></div>
-          <div class="absolute w-[380px] h-[380px] md:w-[500px] md:h-[500px] rounded-full border border-ink-100/60" aria-hidden="true"></div>
-          <div class="absolute w-[480px] h-[480px] md:w-[620px] md:h-[620px] rounded-full border border-ink-100/40" aria-hidden="true"></div>
-          <div class="absolute w-[580px] h-[580px] md:w-[740px] md:h-[740px] rounded-full border border-ink-100/20" aria-hidden="true"></div>
-          <img
-            :src="`${$baseUrl}images/infophone.svg`"
-            alt="App IGP - Pantalla principal"
-            width="380"
-            height="700"
-            loading="lazy"
-            decoding="async"
-            class="relative z-10 w-[260px] md:w-[320px] drop-shadow-2xl"
-          />
+      <div class="mt-16 grid lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-6 items-center">
+        <!-- Left features -->
+        <div class="flex flex-col gap-6 order-2 lg:order-1">
+          <article
+            v-for="(f, i) in about.features.slice(0, 2)"
+            :key="f.title"
+            data-animate
+            :data-animate-delay="i * 150"
+            class="animate-fade-right mt-18 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 shadow-[0_4px_20px_-8px_rgba(15,23,42,0.12)]"
+          >
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
+              <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-brand-700">{{ f.title }}</h3>
+              <p class="text-sm text-ink-500 leading-relaxed mt-1">{{ f.description }}</p>
+            </div>
+          </article>
         </div>
 
-        <!-- Features -->
-        <div class="flex flex-col gap-5">
-          <FeatureItem
-            v-for="f in features"
+        <!-- Center: Phone with epicenter pulse -->
+        <div class="relative flex justify-center items-center min-h-[480px] md:min-h-[600px] order-1 lg:order-2 overflow-hidden lg:overflow-visible"
+          data-animate data-animate-delay="200">
+          <!-- Epicenter pulse rings -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+            <span class="epicenter-ring epicenter-ring--1"></span>
+            <span class="epicenter-ring epicenter-ring--2"></span>
+            <span class="epicenter-ring epicenter-ring--3"></span>
+            <span class="epicenter-ring epicenter-ring--4"></span>
+          </div>
+
+          <!-- Phone image -->
+          <img id="imagenCortada" :src="`${base}images/centerphone.png`" alt="App IGP - Pantalla principal" width="380"
+            height="700" loading="lazy" decoding="async"
+            class="relative z-10 w-[240px] md:w-[280px] drop-shadow-2xl animate-phone-enter border-[#0000AF] border-2 rounded-2xl" />
+        </div>
+
+        <!-- Right features -->
+        <div class="flex flex-col gap-6 order-3 mt-24">
+          <article
+            v-for="(f, i) in about.features.slice(2, 4)"
             :key="f.title"
-            :icon="f.icon"
-            :title="f.title"
-            :description="f.description"
-            :badge="f.badge"
-            :badge-tone="f.badgeTone"
-            :tone="f.tone"
-          />
+            data-animate
+            :data-animate-delay="i * 150 + 300"
+            class="animate-fade-left mt-12 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 shadow-[0_4px_20px_-8px_rgba(15,23,42,0.12)]"
+          >
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
+              <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-brand-700">{{ f.title }}</h3>
+              <p class="text-sm text-ink-500 leading-relaxed mt-1">{{ f.description }}</p>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+/* ── Epicenter pulse animation ── */
+.epicenter-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(41, 55, 255, 0.25);
+  animation: epicenter-pulse 3s ease-out infinite;
+}
+
+.epicenter-ring--1 {
+  width: 200px;
+  height: 200px;
+  animation-delay: 0s;
+}
+
+.epicenter-ring--2 {
+  width: 200px;
+  height: 200px;
+  animation-delay: 0.75s;
+}
+
+.epicenter-ring--3 {
+  width: 200px;
+  height: 200px;
+  animation-delay: 1.5s;
+}
+
+.epicenter-ring--4 {
+  width: 200px;
+  height: 200px;
+  animation-delay: 2.25s;
+}
+
+@keyframes epicenter-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+    border-color: rgba(41, 55, 255, 0.4);
+  }
+
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+    border-color: rgba(41, 55, 255, 0);
+  }
+}
+
+/* ── Phone enter animation ── */
+.animate-phone-enter {
+  animation: phone-float 3s ease-in-out infinite alternate;
+}
+
+@keyframes phone-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+#imagenCortada {
+  object-view-box: inset(0 0 10% 0);
+}
+</style>

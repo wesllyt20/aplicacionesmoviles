@@ -1,40 +1,105 @@
 <script setup>
+import { ref, computed } from 'vue'
+import SectionHeading from '@/components/molecules/SectionHeading.vue'
 import ReviewCard from '@/components/molecules/ReviewCard.vue'
+import { reviews } from '@/data/siteContent.js'
 
-const reviews = [
-  { name: 'Carlos Zúñiga Rendón', comment: 'Es una excelente aplicación, la gente debe entender que esta app es informativa y no preventiva...', color: '#ef4444' },
-  { name: 'Luis Gonzales Tanaka', comment: 'un aplicativo que te informa de movimientos telúricos rápido y con exactitud, excelente', color: '#f59e0b' },
-  { name: 'Guillermo Ernesto Villanueva Sánchez', comment: 'Es una exelente aplicación porque nos informa la magnitud detectada de cada cismo que ocurre ..', color: '#84cc16' },
-  { name: 'Aristides Fernández García', comment: 'Está aplicación es un instrumento que nos permite saber la magnitud, dónde y que hora se ha registrado el sismo y también nos Previene para la emergencia correspondiente, según el caso...', color: '#3b82f6' },
-  { name: 'VICTOR RICARDO OBLITAS DIAZ', comment: 'Muy buena y recomendable paro los que estamos al pendiente de estos movimientos sísmicos.', color: '#06b6d4' },
-  { name: 'Maximo Espinoza', comment: 'Es una aplicación de mucha importancia,yo desearía que tenga alarma.', color: '#a855f7' },
-  { name: 'Lucia Torres Odiaga', comment: 'recién la instale y se abrió de inmediato, muchas gracias, así estaremos mejor informados❤', color: '#ec4899' },
-  { name: 'dennis victtorio mino madueño', comment: 'útil, necesaria y muy seria, permite estar sobre aviso ante cualquier movimiento sísmico, tsunami u otro evento de la naturaleza en nuestro país', color: '#64748b' },
-  { name: 'Luciana Cárdenas Acuña', comment: 'La aplicación me pareció muy buena ya que nos informa sobre magnitudes de sismos que suceden e incluso cuenta con alertas de volcanes, nos brinda conocimiento de que es y para qué sirve el IGP.', color: '#dc2626' },
-  { name: 'raul higa hurtado', comment: 'Muy bien que estén actualizando, para usar más funcionalidades.', color: '#ea580c' },
-  { name: 'Yanesa Yumbato', comment: 'Muy buen aplicativo gracias a todos ustedes', color: '#d946ef' },
-  { name: 'YAKOSTA ELISA GALAVIS', comment: 'Muy completa la aplicación . Los felicito', color: '#facc15' },
-]
+const PER_PAGE = 3
+const currentPage = ref(0)
+const totalPages = computed(() => Math.ceil(reviews.items.length / PER_PAGE))
+const pageReviews = computed(() =>
+  reviews.items.slice(currentPage.value * PER_PAGE, (currentPage.value + 1) * PER_PAGE)
+)
+
+function prev() {
+  if (currentPage.value > 0) currentPage.value--
+}
+function next() {
+  if (currentPage.value < totalPages.value - 1) currentPage.value++
+}
+function goTo(page) {
+  currentPage.value = page
+}
 </script>
 
 <template>
   <section id="reviews" class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <p class="text-center text-sm md:text-base text-ink-700 max-w-4xl mx-auto leading-relaxed">
-        <strong>Esto es lo que dicen los peruanos sobre la app #IGP:</strong>
-        una herramienta confiable y útil que les permite acceder a información geofísica actualizada en tiempo
-        real, mantenerse informados sobre sismos y actividad volcánica, y tomar decisiones oportunas para su seguridad y la de sus familias.
-      </p>
+    <div class="max-w-2xl mx-auto px-6 sm:px-10">
+      <div data-animate class="animate-fade-up">
+        <SectionHeading :eyebrow="reviews.eyebrow" :title="reviews.title" />
+      </div>
 
-      <div class="mt-12 columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5">
-        <ReviewCard
-          v-for="review in reviews"
-          :key="review.name"
-          :name="review.name"
-          :comment="review.comment"
-          :color="review.color"
-        />
+      <!-- Carousel -->
+      <div class="mt-10">
+        <Transition name="slide-fade" mode="out-in">
+          <div :key="currentPage" class="flex flex-col gap-4">
+            <ReviewCard
+              v-for="review in pageReviews"
+              :key="review.name"
+              :name="review.name"
+              :source="review.source"
+              :comment="review.comment"
+              :color="review.color"
+            />
+          </div>
+        </Transition>
+
+        <!-- Navigation row -->
+        <div class="mt-8 flex items-center justify-between">
+          <!-- Prev -->
+          <button
+            @click="prev"
+            :disabled="currentPage === 0"
+            class="p-2 rounded-full border border-ink-200 text-ink-500 hover:text-ink-900 hover:border-ink-400 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            aria-label="Anterior"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <!-- Dot indicators -->
+          <div class="flex items-center gap-2">
+            <button
+              v-for="i in totalPages"
+              :key="i"
+              @click="goTo(i - 1)"
+              :aria-label="`Página ${i}`"
+              class="h-2 rounded-full transition-all duration-300"
+              :class="currentPage === i - 1
+                ? 'w-6 bg-brand-700'
+                : 'w-2 bg-ink-200 hover:bg-ink-400'"
+            />
+          </div>
+
+          <!-- Next -->
+          <button
+            @click="next"
+            :disabled="currentPage === totalPages - 1"
+            class="p-2 rounded-full border border-ink-200 text-ink-500 hover:text-ink-900 hover:border-ink-400 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            aria-label="Siguiente"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+</style>

@@ -1,5 +1,6 @@
 <script setup>
 import StoreBadge from '@/components/molecules/StoreBadge.vue'
+import { cta } from '@/data/siteContent.js'
 </script>
 
 <template>
@@ -25,13 +26,15 @@ import StoreBadge from '@/components/molecules/StoreBadge.vue'
       <path d="M-100 400C200 360 500 440 800 400S1200 320 1540 380" stroke="white" stroke-width="1" fill="none" />
     </svg>
 
-    <div class="relative max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
-        Descarga Ahora <span class="italic font-black">#IGP</span>
-      </h2>
-      <p class="mt-4 text-base md:text-lg text-white/85 italic">
-        Información Oficial, Confiable Y Siempre A Tu Alcance
-      </p>
+    <div class="relative max-w-4xl mx-auto px-6 text-center" data-animate>
+      <div class="animate-fade-up">
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+          {{ cta.title.replace('#IGP', '') }}<span class="italic font-black">#IGP</span>
+        </h2>
+        <p class="mt-4 text-base md:text-lg text-white/85 italic">
+          {{ cta.subtitle }}
+        </p>
+      </div>
       <div class="mt-8 flex flex-wrap justify-center items-center gap-5">
         <StoreBadge store="google" variant="white" />
         <StoreBadge store="apple" variant="white" />
