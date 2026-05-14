@@ -49,7 +49,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="relative overflow-hidden min-h-[80vh] flex items-center bg-brand-900">
+  <section id="hero" class="relative overflow-hidden min-h-screen flex items-center bg-brand-900">
     <!-- Background layers -->
     <div class="absolute inset-0 z-0">
       <!-- bg-principal.svg: always base layer (desktop and mobile) -->
@@ -84,7 +84,7 @@ onUnmounted(() => {
         <h1 class="font-extrabold leading-[1.05] tracking-tight transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 0ms">
           <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{{ hero.hashtag }}</span>
-          <span class="block italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 text-blue-200">
+          <span class="block italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 text-white">
             {{ hero.title }}
           </span>
         </h1>
@@ -96,10 +96,10 @@ onUnmounted(() => {
         </p>
 
         <!-- Store badges -->
-        <div class="mt-7 flex flex-wrap gap-3 transition-all duration-700 ease-out"
+        <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 280ms">
-          <StoreBadge store="google" variant="white" class="flex-1 min-w-36 justify-center" />
-          <StoreBadge store="apple" variant="white" class="flex-1 min-w-36 justify-center" />
+          <StoreBadge store="apple" variant="white" class="w-full sm:w-auto min-w-[200px] max-w-xs sm:max-w-[260px] flex-1 justify-center" href="https://apps.apple.com/pe/app/igp/id6748286605" />
+          <StoreBadge store="google" variant="white" class="w-full sm:w-auto min-w-[200px] max-w-xs sm:max-w-[260px] flex-1 justify-center" href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
         </div>
 
         <!-- Rating + downloads -->
@@ -141,9 +141,12 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- Curve Divider (desktop only, arch points down) -->
+    <div class="hero-curve hidden md:block absolute inset-0 z-10 pointer-events-none" aria-hidden="true"></div>
+
     <!-- Scroll hint: teaser label + bouncing arrow -->
     <div
-      class="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center gap-1 transition-all duration-500 ease-out"
+      class="absolute bottom-1 sm:bottom-30 left-0 right-0 z-20 flex flex-col items-center gap-1 transition-all duration-500 ease-out"
       :class="scrollY > 80 ? 'opacity-0 pointer-events-none' : loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'"
       style="transition-delay: 700ms"
     >

@@ -29,7 +29,8 @@ export const stats = [
 // ─── ACERCA DE #IGP ─────────────────────────────────────────
 export const about = {
     eyebrow: 'Acerca de #IGP',
-    title: 'Todo el IGP en un solo lugar',
+    title: 'Todo el IGP en ',
+    titleHighlight: 'un solo lugar',
     description:
         '#IGP es una aplicación móvil institucional del Instituto Geofísico del Perú que centraliza, en un solo lugar, la información de todos sus servicios, facilitando que la población, autoridades y profesionales se informen, prevengan riesgos y tomen decisiones oportunas.',
     features: [
@@ -63,7 +64,8 @@ export const about = {
 // ─── SERVICIOS Y FUNCIONALIDADES (MINICARDS) ────────────────
 export const services = {
     eyebrow: 'Servicios y Funcionalidades',
-    title: '¡Explora todo lo que #IGP tiene para ti!',
+    title: 'lo que #IGP tiene para ti!',
+    strongTitle: '¡Explora todo ',
     description:
         'Conoce todo lo que puedes encontrar dentro del aplicativo, desde el último sismo hasta las funciones del Planetario Nacional.',
     cards: [
@@ -75,8 +77,10 @@ export const services = {
             image2: 'minicard1-2.png',
             overlayTitle: 'Infórmate sobre el último sismo y más.',
             expandedTitle: 'Centro Sismológico Nacional (CENSIS)',
-            expandedDescription:
-                'Infórmate sobre el último sismo en el país, consulta reportes sísmicos recientes y mapas sísmicos actualizados.',
+            expandedDescription1:
+                'Infórmate sobre el',
+            strongDescription: ' último sismo en el país',
+            expandedDescription2:', consulta reportes sísmicos recientes y mapas sísmicos actualizados.',
             cta: 'Ver más',
         },
         {
@@ -87,8 +91,10 @@ export const services = {
             image2: 'minicard2-2.png',
             overlayTitle: 'Conoce sobre la actividad volcánica reciente y más.',
             expandedTitle: 'Centro Vulcanológico Nacional (CENVUL)',
-            expandedDescription:
-                'Infórmate sobre el último evento volcánico y consulta reportes, boletines, alertas recientes y el estado de cada volcán.',
+            expandedDescription1:
+                'Infórmate sobre el',
+             strongDescription:' último evento volcánico ',
+             expandedDescription2:'y consulta reportes, boletines, alertas recientes y el estado de cada volcán.',
             cta: 'Ver más',
         },
         {
@@ -99,8 +105,10 @@ export const services = {
             image2: 'minicard3-2.png',
             overlayTitle: 'Explora las últimas publicaciones científicas del IGP.',
             expandedTitle: 'Repositorio Geofísico Nacional (REGEN)',
-            expandedDescription:
-                'Explora las últimas publicaciones de los científicos y profesionales del IGP y de las comunidades geofísicas en nuestro repositorio.',
+            expandedDescription1:
+                'Explora las',
+            strongDescription: ' últimas publicaciones ',
+            expandedDescription2: 'de los científicos y profesionales del IGP y de las comunidades geofísicas en nuestro repositorio.',
             cta: 'Ver más',
         },
         {
@@ -111,8 +119,10 @@ export const services = {
             image2: 'minicard4-2.png',
             overlayTitle: 'Conoce los próximos eventos del Planetario IGP.',
             expandedTitle: 'Planetario Nacional IGP',
-            expandedDescription:
-                'Infórmate sobre los próximos eventos y funciones que el planetario ofrece al público en general.',
+            expandedDescription1:
+                'Infórmate sobre los',
+            strongDescription: 'próximos eventos y funciones que el planetario ',
+            expandedDescription2: 'ofrece al público en general.',
             cta: 'Ver más',
         },
         {
@@ -123,8 +133,10 @@ export const services = {
             image2: 'minicard5-2.png',
             overlayTitle: 'Consulta reportes acelerométricos de sismos M ≥ 4.5',
             expandedTitle: 'ACELDAT PERÚ',
-            expandedDescription:
-                'Visualiza todos los reportes acelerométricos generados tras sismos de magnitud mayor o igual a 4.5.',
+            expandedDescription1:
+                'Visualiza todos los',
+                strongDescription: ' reportes acelerométricos ',
+                expandedDescription2: 'generados tras sismos de magnitud mayor o igual a 4.5.',
             cta: 'Ver más',
         },
         {
@@ -135,8 +147,10 @@ export const services = {
             image2: 'minicard6-2.png',
             overlayTitle: 'Conoce toda la información geoespacial del IGP.',
             expandedTitle: 'Infraestructura de Datos Espaciales (IDE)',
-            expandedDescription:
+            expandedDescription1:
                 'Consulta información geoespacial sobre fenómenos geofísicos a través de nuestro portal IDE IGP.',
+            strongDescription: '',
+            expandedDescription2: '',
             cta: 'Ver más',
         },
     ],
@@ -147,7 +161,7 @@ export const reviews = {
     eyebrow: 'Reseñas',
     title: 'Descubre la experiencia de los usuarios con #IGP',
     rating: 4.8,
-    comments:120,
+    comments: 120,
     items: [
         { name: 'Carlos Zúñiga Rendón', source: 'Google Play Store', comment: 'Es una excelente aplicación, la gente debe entender que esta app es informativa y no preventiva...', color: '#ef4444' },
         { name: 'dennis victtorio mino madueño', source: 'Google Play Store', comment: 'Útil, necesaria y muy seria, permite estar sobre aviso ante cualquier movimiento sísmico, tsunami u otro evento de la naturaleza en nuestro país', color: '#64748b' },

@@ -24,13 +24,25 @@ function goTo(page) {
 
 <template>
   <section id="reviews" class="py-16 lg:py-20">
-    <div class="max-w-2xl mx-auto px-6 sm:px-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div data-animate class="animate-fade-up">
         <SectionHeading :eyebrow="reviews.eyebrow" :title="reviews.title" />
       </div>
 
-      <!-- Carousel -->
-      <div class="mt-10">
+      <!-- ── DESKTOP: all reviews in 4-column masonry layout ── -->
+      <div class="hidden lg:block mt-10 columns-4 gap-5" data-animate data-animate-delay="100">
+        <ReviewCard
+          v-for="review in reviews.items"
+          :key="review.name"
+          :name="review.name"
+          :source="review.source"
+          :comment="review.comment"
+          :color="review.color"
+        />
+      </div>
+
+      <!-- ── MOBILE: paginated carousel ── -->
+      <div class="lg:hidden max-w-2xl mx-auto mt-10">
         <Transition name="slide-fade" mode="out-in">
           <div :key="currentPage" class="flex flex-col gap-4">
             <ReviewCard
@@ -46,7 +58,6 @@ function goTo(page) {
 
         <!-- Navigation row -->
         <div class="mt-8 flex items-center justify-between">
-          <!-- Prev -->
           <button
             @click="prev"
             :disabled="currentPage === 0"
@@ -58,7 +69,6 @@ function goTo(page) {
             </svg>
           </button>
 
-          <!-- Dot indicators -->
           <div class="flex items-center gap-2">
             <button
               v-for="i in totalPages"
@@ -66,13 +76,10 @@ function goTo(page) {
               @click="goTo(i - 1)"
               :aria-label="`Página ${i}`"
               class="h-2 rounded-full transition-all duration-300"
-              :class="currentPage === i - 1
-                ? 'w-6 bg-brand-700'
-                : 'w-2 bg-ink-200 hover:bg-ink-400'"
+              :class="currentPage === i - 1 ? 'w-6 bg-brand-700' : 'w-2 bg-ink-200 hover:bg-ink-400'"
             />
           </div>
 
-          <!-- Next -->
           <button
             @click="next"
             :disabled="currentPage === totalPages - 1"

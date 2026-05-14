@@ -200,9 +200,9 @@
                 </svg>
               </div>
               <a
-                href="mailto:comunicacione@igp.gob.pe"
+                href="mailto:comunicaciones@igp.gob.pe"
                 class="text-sm hover:text-white transition-colors"
-                >comunicacione@igp.gob.pe</a
+                >comunicaciones@igp.gob.pe</a
               >
             </li>
             <li class="flex items-center gap-3">
