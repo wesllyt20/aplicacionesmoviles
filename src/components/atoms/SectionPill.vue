@@ -16,7 +16,7 @@ const tones = {
 <template>
   <span
     :class="[
-      'inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide',
+      'inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium tracking-wide',
       tones[tone],
     ]"
   >

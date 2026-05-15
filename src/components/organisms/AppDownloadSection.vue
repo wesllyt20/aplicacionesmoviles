@@ -25,12 +25,12 @@ const base = import.meta.env.BASE_URL
       <!-- Text + badges: right half, vertically centred -->
       <div data-animate data-animate-delay="120"
         class="animate-fade-left absolute inset-y-0 right-0 w-[50%] z-20 flex items-center pr-12 xl:pr-20">
-        <div class="text-white">
-          <h2 class="text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight">
+        <div class="text-white flex items-center justify-center flex-col text-center">
+          <h2 class="text-3xl xl:text-[40px] font-medium tracking-tight leading-tight">
             Descarga Ahora
-            <span class="font-black">#IGP</span>
+            <span class="font-bold">#IGP</span>
           </h2>
-          <p class="mt-4 text-base text-white/80 italic">
+          <p class="mt-4  text-base sm:text-2xl font-medium text-white/80 ">
             {{ cta.subtitle }}
           </p>
           <div class="mt-8 flex flex-wrap gap-4">
@@ -51,19 +51,19 @@ const base = import.meta.env.BASE_URL
       </div>
 
       <div class="relative z-10 flex flex-col items-center text-center text-white px-8 sm:px-16 py-14 sm:py-16">
-        <h2 data-animate class="animate-fade-up text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+        <h2 data-animate class="animate-fade-up text-2xl sm:text-3xl font-medium tracking-tight leading-tight">
           Descarga Ahora
-          <span class="font-black">#IGP</span>
+          <span class="font-bold">#IGP</span>
         </h2>
 
-        <p data-animate data-animate-delay="100" class="animate-fade-up mt-4 text-base text-white/80 italic max-w-sm">
+        <p data-animate data-animate-delay="100" class="animate-fade-up mt-4 text-base text-white/80  max-w-sm">
           {{ cta.subtitle }}
         </p>
 
-        <div data-animate data-animate-delay="200" class="animate-fade-up mt-8 flex flex-col gap-3 w-full max-w-xs">
+        <div data-animate data-animate-delay="200" class="animate-fade-up mt-8 flex  items-center flex-col gap-3 w-full max-w-xs">
           <a href="https://apps.apple.com/pe/app/igp/id6748286605" target="_blank" rel="noopener"
             aria-label="Descargar en App Store"
-            class="flex items-center gap-3 rounded-xl px-5 py-3 bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 select-none">
+            class="flex items-center justify-center gap-3 rounded-xl px-5 py-2 sm:py-3 w-fit bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 select-none">
             <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
               <path
                 d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97c-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.71.85-1.84 1.51-2.95 1.42-.15-1.24.41-2.35 1.05-3.11Z" />
@@ -76,7 +76,7 @@ const base = import.meta.env.BASE_URL
 
           <a href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" target="_blank"
             rel="noopener" aria-label="Descargar en Google Play"
-            class="flex items-center gap-3 rounded-xl px-5 py-3 bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 select-none">
+            class="flex items-center justify-center gap-3 rounded-xl px-5 py-2 sm:py-3 w-fit bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 select-none">
             <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3.609 1.814 13.444 12 3.609 22.186a1.247 1.247 0 0 1-.609-1.08V2.894c0-.462.233-.868.609-1.08Z"
                 fill="#4285F4" />

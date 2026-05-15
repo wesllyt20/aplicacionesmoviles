@@ -39,7 +39,7 @@ function onAfterLeave(el) {
 </script>
 
 <template>
-  <section id="faq" class="py-20 lg:py-28">
+  <section id="faq" class="py-5 lg:py-10">
     <div class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
       <div data-animate class="animate-fade-up">
         <SectionHeading

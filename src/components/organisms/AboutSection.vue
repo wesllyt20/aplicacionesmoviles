@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL
 </script>
 
 <template>
-  <section id="about" class="py-15 lg:py-10 overflow-hidden">
+  <section id="about" class="pt-10 lg:pt-2 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 ">
       <div data-animate class="animate-fade-up flex flex-col items-center text-center">
         <SectionHeading :eyebrow="about.eyebrow" :title="about.title" :titleHighlight="about.titleHighlight" />
@@ -23,7 +23,7 @@ const base = import.meta.env.BASE_URL
         <div class="flex flex-col gap-6 order-2 lg:order-1">
           <article v-for="(f, i) in about.features.slice(0, 2)" :key="f.title" data-animate
             :data-animate-delay="i * 150"
-            class="animate-fade-right mt-0 lg:mt-16 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 shadow-[0_4px_20px_-8px_rgba(15,23,42,0.12)]">
+            class="animate-fade-right mt-0 lg:mt-16 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 ">
             <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
               <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
             </div>
@@ -49,14 +49,14 @@ const base = import.meta.env.BASE_URL
           <!-- Phone image -->
           <img id="imagenCortada" :src="`${base}images/centerphone.png`" alt="App IGP - Pantalla principal" width="380"
             height="700" loading="lazy" decoding="async"
-            class="relative z-10 w-40 sm:w-50 md:w-70 drop-shadow-2xl animate-phone-enter border-[#0000AF] border-2 rounded-2xl" />
+            class="relative z-10 w-40 sm:w-50 md:w-70  animate-phone-enter border-[#0032FF] border-2 rounded-2xl" />
         </div>
 
         <!-- Right features -->
         <div class="flex flex-col gap-6 order-3 mt-0 lg:mt-24">
           <article v-for="(f, i) in about.features.slice(2, 4)" :key="f.title" data-animate
             :data-animate-delay="i * 150 + 300"
-            class="animate-fade-left mt-0 lg:mt-10 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 shadow-[0_4px_20px_-8px_rgba(15,23,42,0.12)]">
+            class="animate-fade-left mt-0 lg:mt-10 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 ">
             <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
               <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
             </div>

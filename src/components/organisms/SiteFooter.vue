@@ -2,123 +2,63 @@
 </script>
 
 <template>
-  <footer class="bg-[#0A1738] text-slate-300 pt-10 md:pt-16 font-sans">
+  <footer class="bg-[#0A1738] text-slate-300 pt-10 md:pt-16 sm:mt-10 font-sans">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 mb-10 md:mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 mb-6 md:mb-6">
         <!-- Col 1: Brand -->
         <div class="space-y-6">
-          <img
-            :src="`${$baseUrl}logos/dark-igp.webp`"
-            alt="IGP Logo"
-            class="h-12 w-auto brightness-0 invert"
-          />
-          <div
-            class="text-sm space-y-1 font-medium tracking-wide opacity-80 text-igp-white"
-          >
-            <p>Ciencia para <span class="font-semibold">protegernos</span>,</p>
-            <p>Ciencia para <span class="font-bold">avanzar</span>.</p>
+          <img :src="`${$baseUrl}logos/dark-igp.webp`" alt="IGP Logo" class="h-12 w-auto brightness-0 invert" />
+          <div class="text-sm space-y-1 tracking-wide opacity-80 text-igp-white">
+            <p>Ciencia para <span class="font-semibold italic">protegernos</span>,</p>
+            <p>Ciencia para <span class="font-semibold italic">avanzar</span>.</p>
           </div>
           <div class="flex flex-wrap gap-3">
             <!-- Facebook -->
-            <a
-              href="https://www.facebook.com/igp.peru"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
+            <a href="https://www.facebook.com/igp.peru" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
-                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 121.1 87.7 221.7 203.4 240.2v-170h-61.2v-70.2h61.2v-53.1c0-60.6 36-94.1 91.3-94.1 26.5 0 53.9 4.8 53.9 4.8v59.3h-30.4c-30.1 0-39.6 18.7-39.6 37.9v45.2h67l-10.7 70.2h-56.3v170c115.7-18.6 203.4-119.1 203.4-240.2z"
-                />
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 121.1 87.7 221.7 203.4 240.2v-170h-61.2v-70.2h61.2v-53.1c0-60.6 36-94.1 91.3-94.1 26.5 0 53.9 4.8 53.9 4.8v59.3h-30.4c-30.1 0-39.6 18.7-39.6 37.9v45.2h67l-10.7 70.2h-56.3v170c115.7-18.6 203.4-119.1 203.4-240.2z" />
               </svg>
             </a>
             <!-- X (Twitter) -->
-            <a
-              href="https://twitter.com/igp_peru"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
+            <a href="https://twitter.com/igp_peru" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
-                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                />
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
               </svg>
             </a>
             <!-- Instagram -->
-            <a
-              href="https://www.instagram.com/igp.peru/"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
+            <a href="https://www.instagram.com/igp.peru/" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                />
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
               </svg>
             </a>
             <!-- LinkedIn -->
-            <a
-              href="https://www.linkedin.com/company/igpperuoficial/"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
+            <a href="https://www.linkedin.com/company/igpperuoficial/" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                />
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
               </svg>
             </a>
             <!-- YouTube -->
-            <a
-              href="https://www.youtube.com/igp_videos"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-              >
+            <a href="https://www.youtube.com/igp_videos" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                 <path
-                  d="M549.655 124.396c-4.735-31.294-28-55.934-58.46-60.835C438.406 54.395 288 54.395 288 54.395s-150.406 0-203.195 9.166c-30.46 4.901-53.725 29.541-58.46 60.835C16.94 179.313 16.94 256 16.94 256s0 76.688 9.394 131.604c4.735 31.294 28 55.934 58.46 60.835C137.594 457.605 288 457.605 288 457.605s150.406 0 203.195-9.166c30.46-4.901 53.725-29.541 58.46-60.835C559.06 332.688 559.06 256 559.06 256s0-76.687-9.394-131.604zM232 337.747V174.253l144 81.747L232 337.747z"
-                />
+                  d="M549.655 124.396c-4.735-31.294-28-55.934-58.46-60.835C438.406 54.395 288 54.395 288 54.395s-150.406 0-203.195 9.166c-30.46 4.901-53.725 29.541-58.46 60.835C16.94 179.313 16.94 256 16.94 256s0 76.688 9.394 131.604c4.735 31.294 28 55.934 58.46 60.835C137.594 457.605 288 457.605 288 457.605s150.406 0 203.195-9.166c30.46-4.901 53.725-29.541 58.46-60.835C559.06 332.688 559.06 256 559.06 256s0-76.687-9.394-131.604zM232 337.747V174.253l144 81.747L232 337.747z" />
               </svg>
             </a>
             <!-- TikTok -->
-            <a
-              href="https://www.tiktok.com/@igp.peru"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-4 h-4 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
+            <a href="https://www.tiktok.com/@igp.peru" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
-                  d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"
-                />
+                  d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
               </svg>
             </a>
             <!-- WhatsApp -->
@@ -139,20 +79,11 @@
               </svg>
             </a> -->
             <!-- Flickr -->
-            <a
-              href="https://www.flickr.com/people/156092703@N08/"
-              target="_blank"
-              rel="noopener"
-              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300"
-            >
-              <svg
-                class="w-5 h-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
+            <a href="https://www.flickr.com/people/156092703@N08/" target="_blank" rel="noopener"
+              class="w-9 h-9 rounded-full border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 flex items-center justify-center transition-all duration-300">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
-                  d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM144.5 319c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5zm159 0c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5z"
-                />
+                  d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM144.5 319c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5zm159 0c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5z" />
               </svg>
             </a>
           </div>
@@ -160,135 +91,85 @@
 
         <!-- Col 2: Contact -->
         <div>
-          <h4
-            class="text-white font-bold text-sm tracking-widest mb-6 uppercase"
-          >
+          <h4 class="text-white font-bold text-sm tracking-widest mb-6 uppercase">
             Contáctanos
           </h4>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <div class="w-8 flex justify-center mt-1">
-                <svg
-                  class="w-5 h-5 text-white/90"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"
-                  />
+                <svg class="w-5 h-5 text-white/90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path fill="currentColor"
+                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" />
                 </svg>
               </div>
               <div class="text-sm">
-                <span class="block text-white/90"
-                  >Calle Calatrava N° 216, Urb. Camino Real</span
-                >
+                <span class="block text-white/90">Calle Calatrava N° 216, Urb. Camino Real</span>
                 <span class="block text-white/90">La Molina - Lima - Perú</span>
               </div>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-8 flex justify-center">
-                <svg
-                  class="w-5 h-5 text-white/90"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                  />
+                <svg class="w-5 h-5 text-white/90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
                 </svg>
               </div>
-              <a
-                href="mailto:comunicaciones@igp.gob.pe"
-                class="text-sm hover:text-white transition-colors"
-                >comunicaciones@igp.gob.pe</a
-              >
+              <a href="mailto:comunicaciones@igp.gob.pe"
+                class="text-sm hover:text-white transition-colors">comunicaciones@igp.gob.pe</a>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-8 flex justify-center">
-                <svg
-                  class="w-5 h-5 text-white/90"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                  />
+                <svg class="w-5 h-5 text-white/90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
                 </svg>
               </div>
-              <a
-                href="tel:5154369212"
-                class="text-sm hover:text-white transition-colors"
-                >(51) 54 369212</a
-              >
+              <a href="tel:5154369212" class="text-sm hover:text-white transition-colors">(51) 54 369212</a>
             </li>
           </ul>
         </div>
 
         <!-- Col 3: Links -->
         <div>
-          <h4
-            class="text-white font-bold text-sm tracking-widest mb-6 uppercase"
-          >
+          <h4 class="text-white font-bold text-sm tracking-widest mb-6 uppercase">
             Enlaces de interés
           </h4>
           <ul class="space-y-3">
             <li>
-              <a
-                href="#"
-                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"
-                ><span
-                  class="text-slate-500 group-hover:text-white transition-colors"
-                  >›</span
-                >
-                Consultas del ciudadano</a
-              >
+              <a href="https://facilita.gob.pe/t/2860" target="_blank"
+                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Consultas del ciudadano</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"
-                ><span
-                  class="text-slate-500 group-hover:text-white transition-colors"
-                  >›</span
-                >
-                Reporte de inquietudes</a
-              >
+              <a href="https://facilita.gob.pe/t/2864" target="_blank"
+                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Reporte de inquietudes</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"
-                ><span
-                  class="text-slate-500 group-hover:text-white transition-colors"
-                  >›</span
-                >
-                Denuncias de corrupción</a
-              >
+              <a href="https://www.gob.pe/21129-denunciar-un-presunto-acto-de-corrupcion?child=27663" target="_blank"
+                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Denuncias de corrupción</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"
-                ><span
-                  class="text-slate-500 group-hover:text-white transition-colors"
-                  >›</span
-                >
-                Certificaciones ISO's</a
-              >
+              <a href="https://www.gob.pe/institucion/igp/colecciones/6444-certificaciones-iso" target="_blank"
+                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Certificaciones ISO's</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"
-                ><span
-                  class="text-slate-500 group-hover:text-white transition-colors"
-                  >›</span
-                >
-                Portal de transparencia</a
-              >
+              <a href="https://www.gob.pe/20399-solicitar-acceso-a-la-informacion-publica?child=20802#" target="_blank"
+                class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Solicitud de acceso a la información pública</a>
+            </li>
+            <li>
+              <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=188#.YyNw5z3MKUl"
+                target="_blank" class="text-sm flex items-center gap-2 hover:text-white transition-colors group"><span
+                  class="text-slate-500 group-hover:text-white transition-colors">›</span>
+                Portal de transparencia</a>
             </li>
           </ul>
         </div>
@@ -300,35 +181,36 @@
           </h4>
           <div class="flex flex-col gap-3">
             <!-- Google Play -->
-            <a
-              href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE"
-              target="_blank"
+            <a href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" target="_blank"
               rel="noopener"
-              class="flex items-center gap-3 bg-white/[0.07] hover:bg-white/[0.13] border border-white/10 hover:border-white/25 rounded-xl px-4 py-3 transition-all group w-full"
-            >
-              <svg class="w-7 h-7 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.609 1.814 13.444 12 3.609 22.186a1.247 1.247 0 0 1-.609-1.08V2.894c0-.462.233-.868.609-1.08Z" fill="#4285F4" />
-                <path d="m17.159 8.641-3.715 3.36 3.715 3.359 4.182-2.384c.6-.342.6-1.207 0-1.55l-4.182-2.385-.001.6Z" fill="#FBBC04" />
-                <path d="M3.609 1.814 13.444 12l3.715-3.359L6.34.372C5.858.097 5.312.014 4.807.14a1.84 1.84 0 0 0-.564.216l-.001.001-.633 1.457Z" fill="#34A853" />
-                <path d="M3.609 22.186 6.34 23.628l10.819-8.269L13.444 12 3.609 22.186Z" fill="#EA4335" />
+              class="flex items-center justify-center gap-3 bg-white/[0.07] hover:bg-white/[0.13] border border-white/10 hover:border-white/25 rounded-xl px-4 py-3 transition-all group w-full">
+              <svg class="w-7 h-7 shrink-0" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 25.9958V1.9125C0 1.07667 0.481667 0.34 1.19 0L15.1442 13.9542L1.19 27.9083C0.481667 27.5542 0 26.8317 0 25.9958ZM19.5642 18.3742L4.32083 27.1858L16.3483 15.1583L19.5642 18.3742ZM24.31 12.2683C24.7917 12.6508 25.1458 13.2458 25.1458 13.9542C25.1458 14.6625 24.8342 15.2292 24.3383 15.6258L21.0942 17.4958L17.5525 13.9542L21.0942 10.4125L24.31 12.2683ZM4.32083 0.7225L19.5642 9.53417L16.3483 12.75L4.32083 0.7225Z"
+                  fill="white" />
               </svg>
+
               <div class="leading-tight">
-                <span class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Disponible en</span>
+                <span
+                  class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Disponible
+                  en</span>
                 <span class="block text-sm font-bold text-white">Google Play</span>
               </div>
             </a>
             <!-- App Store -->
-            <a
-              href="https://apps.apple.com/pe/app/igp/id6748286605"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-3 bg-white/[0.07] hover:bg-white/[0.13] border border-white/10 hover:border-white/25 rounded-xl px-4 py-3 transition-all group w-full"
-            >
-              <svg class="w-7 h-7 shrink-0 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97c-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.71.85-1.84 1.51-2.95 1.42-.15-1.24.41-2.35 1.05-3.11Z" />
+            <a href="https://apps.apple.com/pe/app/igp/id6748286605" target="_blank" rel="noopener"
+              class="flex items-center justify-center gap-3 bg-white/[0.07] hover:bg-white/[0.13] border border-white/10 hover:border-white/25 rounded-xl px-4 py-3 transition-all group w-full">
+              <svg class="w-7 h-7 shrink-0 fill-white" viewBox="0 0 23 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.0313 25.5208C19.8554 27.3292 18.6088 29.0938 16.7104 29.1229C14.8121 29.1667 14.2029 27.9708 12.0496 27.9708C9.88209 27.9708 9.21625 29.0938 7.41709 29.1667C5.56125 29.2396 4.15875 27.2417 2.96875 25.4771C0.546253 21.875 -1.30958 15.2396 1.18375 10.7771C2.41625 8.56042 4.62625 7.16042 7.02042 7.11667C8.83375 7.0875 10.5621 8.38542 11.6813 8.38542C12.7863 8.38542 14.8829 6.825 17.0788 7.05833C17.9996 7.10208 20.5779 7.4375 22.2354 9.94583C22.1079 10.0333 19.1613 11.8125 19.1896 15.5021C19.2321 19.9062 22.9438 21.3792 22.9863 21.3938C22.9438 21.4958 22.3913 23.4938 21.0313 25.5208ZM12.9421 2.1875C13.9763 0.977083 15.6904 0.0583333 17.1071 0C17.2913 1.70625 16.6254 3.42708 15.6338 4.65208C14.6563 5.89167 13.0413 6.85417 11.4546 6.72292C11.2421 5.04583 12.0354 3.29583 12.9421 2.1875Z"
+                  fill="white" />
               </svg>
+
               <div class="leading-tight">
-                <span class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Descarga en</span>
+                <span
+                  class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Descarga
+                  en</span>
                 <span class="block text-sm font-bold text-white">App Store</span>
               </div>
             </a>
@@ -337,26 +219,17 @@
       </div>
     </div>
     <!-- Copyright -->
-    <div
-      class="mt-8 md:mt-16 py-6 border-t bg-[#0A1738] border-slate-700/50 text-sm  text-igp-white"
-    >
+    <div class="mt-6 md:mt-10 py-6 border-t bg-[#0A1738] border-slate-700/50 text-sm  text-igp-white">
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
-      >
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         <p>
           &copy; {{ new Date().getFullYear() }} Instituto Geofísico del Perú.
           Todos los derechos reservados.
         </p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-slate-300 transition-colors text-xs"
-            >Política de privacidad</a
-          >
-          <a href="#" class="hover:text-slate-300 transition-colors text-xs"
-            >Términos de uso</a
-          >
-          <a href="#" class="hover:text-slate-300 transition-colors text-xs"
-            >Accesibilidad</a
-          >
+          <a href="#" class="hover:text-slate-300 transition-colors text-xs">Política de privacidad</a>
+          <a href="#" class="hover:text-slate-300 transition-colors text-xs">Términos de uso</a>
+          <a href="#" class="hover:text-slate-300 transition-colors text-xs">Accesibilidad</a>
         </div>
       </div>
     </div>

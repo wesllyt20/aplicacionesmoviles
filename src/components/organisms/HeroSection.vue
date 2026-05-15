@@ -96,10 +96,10 @@ onUnmounted(() => {
         </p>
 
         <!-- Store badges -->
-        <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full transition-all duration-700 ease-out"
+        <div class="mt-7 flex sm:flow-root flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 280ms">
-          <StoreBadge store="apple" variant="white" class="w-full sm:w-auto min-w-[200px] max-w-xs sm:max-w-[260px] flex-1 justify-center" href="https://apps.apple.com/pe/app/igp/id6748286605" />
-          <StoreBadge store="google" variant="white" class="w-full sm:w-auto min-w-[200px] max-w-xs sm:max-w-[260px] flex-1 justify-center" href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
+          <StoreBadge store="apple" variant="white" class="w-full sm:w-auto   flex-1 justify-center" href="https://apps.apple.com/pe/app/igp/id6748286605" />
+          <StoreBadge store="google" variant="white" class="w-full sm:w-auto  sm:ml-6  flex-1 justify-center" href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
         </div>
 
         <!-- Rating + downloads -->

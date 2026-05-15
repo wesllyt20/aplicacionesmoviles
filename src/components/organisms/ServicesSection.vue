@@ -6,28 +6,28 @@ const base = import.meta.env.BASE_URL
 </script>
 
 <template>
-  <section id="services" class="py-20 lg:py-28 bg-white">
+  <section id="services" class="py-15 lg:pt-18  bg-white">
     <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 xl:px-32">
       <div data-animate class="animate-fade-up">
         <SectionHeading :eyebrow="services.eyebrow" :title="services.title" :strongTitle="services.strongTitle"
           :description="services.description" />
       </div>
 
-      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 md:gap-6">
         <div v-for="(card, idx) in services.cards" :key="card.id" data-animate :data-animate-delay="idx * 100"
-          class="animate-fade-up service-card group relative rounded-2xl overflow-hidden cursor-pointer h-[200px] md:h-[230px] shadow-lg">
+          class="animate-fade-up service-card group relative rounded-2xl overflow-hidden cursor-pointer h-[230px] md:h-[230px] shadow-lg">
           <!-- === CARA FRONTAL === -->
           <div class="front-face absolute inset-0">
             <img :src="`${base}images/${card.image}`" :alt="card.overlayTitle" class="w-full h-full object-cover"
               loading="lazy" />
             <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent"></div>
-            <div class="absolute grid grid-cols-5 top-0 h-full items-center  text-white px4 ">
-              <div class="col-span-3 pl-7">
-                <h3 class="text-sm font-bold leading-snug line-clamp-3 max-w-60  "
+            <div class="absolute grid grid-cols-7 top-0 h-full items-center  text-white px4 ">
+              <div :class="['col-span-4 pl-7 flex flex-col', idx === 0 ? 'pr-7' : 'pr-3']">
+                <h3 class="text-sm font-normal leading-snug line-clamp-3 max-w-60  "
                   v-html="card.overlayTitle.replace(/(último sismo|actividad volcánica|últimas publicaciones científicas|próximos eventos|reportes acelerométricos|información geoespacial)/gi, '<em class=\'font-black italic\'>$1</em>')">
                 </h3>
                 <div
-                  class="inline-flex mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-1.5 text-sm font-medium">
+                  class="inline-flex w-fit mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-1.5 text-sm font-medium">
                   {{ card.cta }}
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -42,7 +42,8 @@ const base = import.meta.env.BASE_URL
             <!-- Left 7/12: info -->
             <div class="back-info" style="width: 58.33%">
               <div class="p-5 flex flex-col justify-center h-full">
-                <img :src="`${base}icons/${card.icon}`" :alt="card.expandedTitle" class="w-9 h-9 mb-3" />
+                <img :src="`${base}icons/${card.icon}`" :alt="card.expandedTitle"
+                  class="w-11 h-11 mb-3 border-black/10 border rounded-lg p-1" />
                 <h3 class="text-sm font-bold text-ink-900 leading-snug mb-2">{{ card.expandedTitle }}</h3>
                 <p class="text-xs text-ink-500 ">{{ card.expandedDescription1 }}
                   <strong>{{ card.strongDescription }}</strong>{{ card.expandedDescription2 }}

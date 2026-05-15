@@ -240,5 +240,5 @@ export const navigation = {
         { label: 'Servicios y Funcionalidades', href: '#services' },
         { label: 'Reseñas', href: '#reviews' },
     ],
-    ctaLabel: 'DescargarApp',
+    ctaLabel: 'Descargar App',
 }

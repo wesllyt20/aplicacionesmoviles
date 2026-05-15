@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   eyebrow: { type: String, default: '' },
-  title: { type: String, required: true },
+  title: { type: String, required: false },
   titleHighlight: { type: String, default: '' },
   strongTitle: { type: String, default: '' },
   align: { type: String, default: 'center' }, // center | left
