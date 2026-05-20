@@ -77,38 +77,38 @@ onUnmounted(() => {
     </div>
 
     <div
-      class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full grid md:grid-cols-2 gap-8 lg:gap-16 items-center pt-28 pb-12 lg:pt-36 lg:pb-24">
+      class="relative z-10 max-w-400 mx-auto px-6 lg:px-10 w-full grid md:grid-cols-2 gap-8 lg:gap-16 items-center pt-28 pb-12 lg:pt-3 lg:pb-24">
       <!-- Left: Content with staggered entrance -->
       <div class="text-white">
         <!-- Hashtag title -->
         <h1 class="font-extrabold leading-[1.05] tracking-tight transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 0ms">
-          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{{ hero.hashtag }}</span>
-          <span class="block italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 text-white">
+          <span class="block text-4xl sm:text-5xl md:text-7xl lg:text-[80px]">{{ hero.hashtag }}</span>
+          <span class="block italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[60px] mt-1 text-white">
             {{ hero.title }}
           </span>
         </h1>
 
         <!-- Description -->
-        <p class="mt-5 text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-lg transition-all duration-700 ease-out"
+        <p class="mt-10 lg:mt-15 text-sm sm:text-base md:text-[20px] text-white/80 leading-relaxed max-w-lg transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 150ms">
           {{ hero.description }}
         </p>
 
         <!-- Store badges -->
-        <div class="mt-7 flex sm:flow-root flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full transition-all duration-700 ease-out"
+        <div class="mt-7 lg:mt-15 flex sm:flow-root flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 280ms">
-          <StoreBadge store="apple" variant="white" class="w-full sm:w-auto   flex-1 justify-center" href="https://apps.apple.com/pe/app/igp/id6748286605" />
-          <StoreBadge store="google" variant="white" class="w-full sm:w-auto  sm:ml-6  flex-1 justify-center" href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
+          <StoreBadge store="google" variant="white" class="w-full sm:w-auto    flex-1 justify-center" href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
+          <StoreBadge store="apple" variant="white" class="w-full sm:w-auto  sm:ml-6 flex-1 justify-center" href="https://apps.apple.com/pe/app/igp/id6748286605" />
         </div>
 
         <!-- Rating + downloads -->
-        <div class="mt-6 flex items-center gap-4 transition-all duration-700 ease-out"
+        <div class="mt-6 lg:mt-15 flex items-center gap-4 transition-all duration-700 ease-out"
           :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" style="transition-delay: 380ms">
           <!-- Avatars -->
           <div class="flex -space-x-3">
             <div v-for="(review, i) in reviews.items.slice(0, 4)" :key="review.name"
-              class="w-10 h-10 rounded-full border-2 border-white grid place-items-center text-white text-sm font-bold shadow"
+              class="w-10 h-10 rounded-full  grid place-items-center text-white text-sm font-bold shadow"
               :style="{ background: review.color, zIndex: 4 - i }">
               {{ initial(review.name) }}
             </div>

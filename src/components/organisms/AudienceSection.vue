@@ -12,7 +12,7 @@ const items = [
 
 <template>
   <section id="audience" class="py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-400 mx-auto px-6 lg:px-10">
       <SectionHeading
         eyebrow="Público objetivo"
         title="¿A quien esta dirigido?"

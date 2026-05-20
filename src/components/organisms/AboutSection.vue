@@ -7,13 +7,13 @@ const base = import.meta.env.BASE_URL
 
 <template>
   <section id="about" class="pt-10 lg:pt-2 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 ">
+    <div class="max-w-400 mx-auto px-6 lg:px-10 ">
       <div data-animate class="animate-fade-up flex flex-col items-center text-center">
         <SectionHeading :eyebrow="about.eyebrow" :title="about.title" :titleHighlight="about.titleHighlight" />
         <!-- description -->
         <p class=" text-sm md:text-base text-ink-500 leading-relaxed mt-4">
-          <strong>#IGP</strong> es una aplicación móvil institucional del Instituto Geofísico del Perú que
-          <strong>centraliza, en un solo lugar, la información de todos sus servicios</strong>, facilitando que la
+          <strong>#IGP</strong> es una aplicativo móvil institucional del Instituto Geofísico del Perú que
+          <strong>centraliza, en un solo lugar, la información de todos <br class="hidden lg:inline">sus servicios</strong>, facilitando que la
           población, autoridades y profesionales se informen, prevengan riesgos y tomen decisiones oportunas.
         </p>
       </div>

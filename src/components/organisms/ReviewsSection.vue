@@ -38,7 +38,7 @@ function onTouchEnd(e) {
 
 <template>
   <section id="reviews" class="py-5 lg:py-2">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-400 mx-auto px-6 lg:px-10">
       <div data-animate class="animate-fade-up text-center">
         <SectionHeading :eyebrow="reviews.eyebrow" />
         <h2 class="text-2xl md:text-3xl text-[#0F00DB] tracking-tight font-normal">

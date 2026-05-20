@@ -14,7 +14,7 @@ defineProps({
       ? 'bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md'
       : 'bg-black/30 text-white border border-white/30 backdrop-blur-sm hover:bg-black/40'">
     <!-- Google Play icon -->
-    <svg v-if="store === 'google'" class="w-7 h-7 shrink-0" viewBox="0 0 29 33" fill="none"
+    <svg v-if="store === 'google'" class="w-8 h-8 shrink-0" viewBox="0 0 29 33" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M27.5967 13.9407L22.042 10.7324L16.3553 16.4191L22.0416 22.1054L27.6156 18.8865C28.4848 18.3584 29.0034 17.4359 29.0034 16.4191C29.0034 15.4023 28.4844 14.4798 27.5967 13.9407Z"

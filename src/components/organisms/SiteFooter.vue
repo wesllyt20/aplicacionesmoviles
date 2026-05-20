@@ -3,7 +3,7 @@
 
 <template>
   <footer class="bg-[#0A1738] text-slate-300 pt-10 md:pt-16 sm:mt-10 font-sans">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-400 mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 mb-6 md:mb-6">
         <!-- Col 1: Brand -->
         <div class="space-y-6">

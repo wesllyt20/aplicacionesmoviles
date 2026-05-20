@@ -25,8 +25,8 @@ function smoothScroll(e, href) {
 
 <template>
   <header class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
-    :class="[y > 40 ? 'bg-white shadow-lg' : '']">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between gap-6">
+    :class="[y > 40 ? 'bg-white border-b border-gray-200' : '']">
+    <div class="max-w-400 mx-auto px-6 lg:px-10 py-4 flex items-center justify-between gap-6">
       <!-- Left logos -->
       <div class="flex items-center gap-4">
         <img :src="y > 40 ? `${$baseUrl}logos/minam.png` : `${$baseUrl}logos/dark-minam.webp`" alt="Ministerio del Ambiente" width="120" height="36"
@@ -40,7 +40,7 @@ function smoothScroll(e, href) {
       <nav v-if="width >= 1024" class="flex items-center gap-7">
         <a v-for="link in links" :key="link.href" :href="link.href" @click="smoothScroll($event, link.href)"
           class="text-sm transition-colors "
-          :class="y > 40 ? 'text-[#0F00DB] hover:text-[#0F00DB]/80' : 'text-white/90 hover:text-white'">
+          :class="y > 40 ? 'text-black hover:text-[#0F00DB]/80' : 'text-white/90 hover:text-white'">
           {{ link.label }}
         </a>
         <BaseButton :variant="y > 40 ? 'primary' : 'white-outline'" size="sm" as="a" href="#download"
