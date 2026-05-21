@@ -73,7 +73,6 @@ onUnmounted(() => {
       </template>
 
       <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-linear-to-r from-brand-950/70 via-brand-900/50 to-transparent"></div>
     </div>
 
     <div

@@ -9,7 +9,7 @@ defineProps({
 <template>
   <a :href="href" target="_blank" rel="noopener"
     :aria-label="store === 'google' ? 'Descargar en Google Play' : 'Descargar en App Store'"
-    class="inline-flex items-center  rounded-2xl px-4 py-1.5 transition-all duration-200 hover:-translate-y-0.5 select-none"
+    class="inline-flex items-center  rounded-2xl px-4 py-1.5 h- transition-all duration-200 hover:-translate-y-0.5 select-none  w-auto sm:w-48.75]! h-fit sm:h-14.25"
     :class="variant === 'white'
       ? 'bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md'
       : 'bg-black/30 text-white border border-white/30 backdrop-blur-sm hover:bg-black/40'">
@@ -59,12 +59,12 @@ defineProps({
       <template v-if="store === 'google'">
         <span class="block text-[10px]  tracking-wider "
           :class="variant === 'white' ? 'text-ink-500' : 'text-white/70'">Disponible en</span>
-        <span class="block text-sm font-bold">Google Play</span>
+        <span class="block text-sm font-medium">Google Play</span>
       </template>
       <template v-else>
         <span class="block text-[10px]  tracking-wider"
           :class="variant === 'white' ? 'text-ink-500' : 'text-white/70'">Disponible en</span>
-        <span class="block text-sm font-bold">App Store</span>
+        <span class="block text-sm font-medium">App Store</span>
       </template>
     </div>
   </a>

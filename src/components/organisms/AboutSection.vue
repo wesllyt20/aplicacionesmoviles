@@ -61,7 +61,7 @@ const base = import.meta.env.BASE_URL
               <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
             </div>
             <div>
-              <h3 class="text-lg font-bold text-brand-700">{{ f.title }}</h3>
+              <h3 class="text-lg font-normal text-brand-700">{{ f.title }}</h3>
               <p class="text-sm text-ink-500 leading-relaxed mt-1">{{ f.description }}</p>
             </div>
           </article>

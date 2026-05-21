@@ -31,7 +31,7 @@ import { cta } from '@/data/siteContent.js'
         <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
           {{ cta.title.replace('#IGP', '') }}<span class="italic font-black">#IGP</span>
         </h2>
-        <p class="mt-4 text-base md:text-lg text-white/85 italic">
+        <p class="mt-4 text-base md:text-lg text-white italic">
           {{ cta.subtitle }}
         </p>
       </div>

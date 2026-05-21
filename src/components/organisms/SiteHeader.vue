@@ -30,7 +30,7 @@ function smoothScroll(e, href) {
       <!-- Left logos -->
       <div class="flex items-center gap-4">
         <img :src="y > 40 ? `${$baseUrl}logos/minam.png` : `${$baseUrl}logos/dark-minam.webp`" alt="Ministerio del Ambiente" width="120" height="36"
-          class="h-9 w-auto" />
+          class="h-9 w-44 sm:w-auto" />
         <img :src="y > 40 ? `${$baseUrl}logos/igp.png` : `${$baseUrl}logos/dark-igp.webp`" alt="Instituto Geofísico del Perú" width="120" height="36"
           class="hidden sm:block h-9 w-auto" />
         <img :src="y > 40 ? `${$baseUrl}logos/responsive_igp.png` : `${$baseUrl}logos/dark_responsive_igp.png`" alt="IGP" class="sm:h-10 h-8 sm:hidden" />
@@ -52,8 +52,8 @@ function smoothScroll(e, href) {
 
       <!-- Mobile button -->
       <button v-else @click="isOpen = !isOpen"
-        class="py-2 rounded-md transition-colors"
-        :class="y > 40 ? 'text-[#0F00DB] hover:bg-[#0F00DB]/10' : 'text-white hover:bg-white/10'"
+        class="py-2 rounded-md transition-colors border px-1 sm:px-2"
+        :class="y > 40 ? 'text-black hover:bg-[#0F00DB]/10' : 'text-white hover:bg-white/10'"
         aria-label="Abrir menú">
         <BaseIcon name="menu" :size="24" />
       </button>
@@ -69,7 +69,7 @@ function smoothScroll(e, href) {
         <nav class="px-6 py-4 flex flex-col gap-3">
           <a v-for="link in links" :key="link.href" :href="link.href" @click="smoothScroll($event, link.href)"
             class="text-sm py-2 transition-colors"
-            :class="y > 40 ? 'text-[#0F00DB] hover:text-[#0F00DB]/80' : 'text-white/90 hover:text-white'">
+            :class="y > 40 ? 'text-black hover:text-[#0F00DB]/80' : 'text-white/90 hover:text-white'">
             {{ link.label }}
           </a>
           <BaseButton :variant="y > 40 ? 'primary' : 'white-outline'" size="sm" as="a" href="#download"

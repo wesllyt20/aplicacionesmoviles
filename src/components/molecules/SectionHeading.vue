@@ -16,8 +16,8 @@ import SectionPill from '@/components/atoms/SectionPill.vue'
     <SectionPill v-if="eyebrow" :label="eyebrow" tone="brand" />
     <h2 v-if="htmlTitle" class="text-2xl md:text-3xl font-bold text-[#0F00DB] tracking-tight" v-html="title"></h2>
     <h2 v-else class="text-2xl md:text-3xl text-[#0F00DB] tracking-tight font-normal">
-      <span class="text-[#0F00DB] font-semibold" v-if="strongTitle">{{ strongTitle }}</span> {{ title }} <span
-        v-if="titleHighlight" class="text-[#0F00DB] font-semibold italic">{{ titleHighlight }}</span>
+      <span class="text-[#0F00DB] italic font-semibold" v-if="strongTitle">{{ strongTitle }}</span> {{ title }} <span
+        v-if="titleHighlight" class="text-[#0F00DB] font-semibold italic">{{ titleHighlight }}</span> 
     </h2>
 
   </div>
