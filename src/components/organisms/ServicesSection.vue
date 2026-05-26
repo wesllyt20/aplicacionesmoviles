@@ -3,11 +3,48 @@ import SectionHeading from '@/components/molecules/SectionHeading.vue'
 import { services } from '@/data/siteContent.js'
 
 const base = import.meta.env.BASE_URL
+
+const overlayTitleLines = {
+  1: [
+    [{ text: 'Infórmate sobre' }],
+    [{ text: 'el último sismo', emphasis: true }],
+    [{ text: 'y más.' }],
+  ],
+  2: [
+    [{ text: 'Conoce sobre la' }],
+    [{ text: 'actividad volcánica', emphasis: true }],
+    [{ text: 'reciente y más.' }],
+  ],
+  3: [
+    [{ text: 'Explora las ' }, { text: 'últimas', emphasis: true }],
+    [{ text: 'publicaciones', emphasis: true }],
+    [{ text: 'científicas.', emphasis: true }],
+  ],
+  4: [
+    [{ text: 'Conoce los' }],
+    [{ text: 'próximos eventos', emphasis: true }],
+    [{ text: 'del Planetario IGP.' }],
+  ],
+  5: [
+    [{ text: 'Consulta' }],
+    [{ text: 'reportes', emphasis: true }],
+    [{ text: 'acelerométricos', emphasis: true }],
+  ],
+  6: [
+    [{ text: 'Conoce toda la' }],
+    [{ text: 'información', emphasis: true }],
+    [{ text: 'geoespacial', emphasis: true }, { text: ' del IGP.' }],
+  ],
+}
+
+function getOverlayTitleLines(card) {
+  return overlayTitleLines[card.id] || [[{ text: card.overlayTitle }]]
+}
 </script>
 
 <template>
   <section id="services" class="py-10 lg:pt-18 bg-white">
-    <div class="max-w-400 mx-auto px-6 sm:px-12 lg:px-20 xl:px-9.5">
+    <div class="max-w-360 mx-auto px-6 sm:px-12 lg:px-20 xl:px-9.5">
       <div data-animate class="animate-fade-up text-center">
         <SectionHeading :eyebrow="services.eyebrow" :title="services.title" :strongTitle="services.strongTitle" />
         <p class=" text-sm md:text-base text-ink-500 leading-relaxed mt-4">
@@ -23,14 +60,19 @@ const base = import.meta.env.BASE_URL
           <div class="front-face absolute inset-0">
             <img :src="`${base}images/${card.image}`" :alt="card.overlayTitle" class="w-full h-full object-cover"
               loading="lazy" />
-            <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent"></div>
-            <div class="absolute grid grid-cols-7 top-0 h-full items-center  text-white">
-              <div :class="['col-span-6 pl-5 flex flex-col', idx === 0 ? 'pr-6 sm:pr-7' : 'pr-3']">
-                <h3 class="text-xl lg:text-2xl font-normal leading-snug line-clamp-3 "
-                  v-html="card.overlayTitle.replace(/(último sismo|actividad volcánica|últimas publicaciones científicas|próximos eventos|reportes acelerométricos|información geoespacial)/gi, '<em class=\'font-black italic\'>$1</em>')">
+            <div class="absolute inset-0 grid grid-cols-7 items-center text-white">
+              <div :class="['col-span-5 pl-5 flex flex-col items-start', idx === 0 ? 'pr-6 sm:pr-12' : 'pr-3']">
+                <h3 class="service-card-title">
+                  <span v-for="(line, lineIndex) in getOverlayTitleLines(card)" :key="lineIndex"
+                    class="block whitespace-nowrap">
+                    <template v-for="(part, partIndex) in line" :key="partIndex">
+                      <em v-if="part.emphasis" class="font-black italic">{{ part.text }}</em>
+                      <span v-else>{{ part.text }}</span>
+                    </template>
+                  </span>
                 </h3>
                 <div
-                  class="inline-flex w-fit mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-1.5 text-base lg:text-lg font-medium">
+                  class="inline-flex w-fit mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-2 text-sm font-semibold">
                   {{ card.cta }}
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -71,6 +113,19 @@ const base = import.meta.env.BASE_URL
 /* ── Card base ── */
 .service-card {
   perspective: 800px;
+}
+
+.service-card-title {
+  font-size: 22px;
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1024px) {
+  .service-card-title {
+    font-size: 28px;
+  }
 }
 
 /* ── Front face ── */

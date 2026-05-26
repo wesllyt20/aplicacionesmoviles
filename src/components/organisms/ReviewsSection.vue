@@ -5,6 +5,21 @@ import ReviewCard from '@/components/molecules/ReviewCard.vue'
 import { reviews } from '@/data/siteContent.js'
 
 const PER_PAGE = 3
+const reviewColumns = computed(() => {
+  const columns = Array.from({ length: 4 }, () => [])
+  reviews.items.forEach((review, index) => {
+    columns[index % columns.length].push(review)
+  })
+  return columns
+})
+const reviewColorOverrides = {
+  'dennis victtorio mino madueño': '#d91bdc',
+  'Aristides Fernández García': '#1510d8',
+  'raul higa hurtado': '#06bf5b',
+  'Lucia Torres Odiaga': '#b00009',
+  'Luciana Cárdenas Acuña': '#7b6a6a',
+  'YAKOSTA ELISA GALAVIS': '#199ed8',
+}
 const currentPage = ref(0)
 const totalPages = computed(() => Math.ceil(reviews.items.length / PER_PAGE))
 const pageReviews = computed(() =>
@@ -19,6 +34,10 @@ function next() {
 }
 function goTo(page) {
   currentPage.value = page
+}
+
+function reviewColor(review) {
+  return reviewColorOverrides[review.name] || review.color
 }
 
 // ── Touch / swipe ──────────────────────────────────────────
@@ -38,7 +57,7 @@ function onTouchEnd(e) {
 
 <template>
   <section id="reviews" class="py-5 lg:py-2">
-    <div class="max-w-400 mx-auto px-6 lg:px-10">
+    <div class="max-w-360 mx-auto px-6 lg:px-10">
       <div data-animate class="animate-fade-up text-center">
         <SectionHeading :eyebrow="reviews.eyebrow" />
         <h2 class="text-2xl md:text-3xl text-[#0F00DB] tracking-tight font-normal">
@@ -51,9 +70,11 @@ function onTouchEnd(e) {
       </div>
 
       <!-- ── DESKTOP: all reviews in 4-column masonry layout ── -->
-      <div class="hidden lg:block mt-10 columns-4 gap-5" data-animate data-animate-delay="100">
-        <ReviewCard v-for="review in reviews.items" :key="review.name" :name="review.name" :source="review.source"
-          :comment="review.comment" :color="review.color" />
+      <div class="hidden lg:grid mt-10 grid-cols-4 gap-5" data-animate data-animate-delay="100">
+        <div v-for="(column, columnIndex) in reviewColumns" :key="columnIndex" class="flex flex-col gap-5">
+          <ReviewCard v-for="review in column" :key="review.name" :name="review.name" :source="review.source"
+            :comment="review.comment" :color="reviewColor(review)" />
+        </div>
       </div>
 
       <!-- ── MOBILE: paginated carousel ── -->
@@ -63,7 +84,7 @@ function onTouchEnd(e) {
         <Transition name="slide-fade" mode="out-in">
           <div :key="currentPage" class="flex flex-col gap-4">
             <ReviewCard v-for="review in pageReviews" :key="review.name" :name="review.name" :source="review.source"
-              :comment="review.comment" :color="review.color" />
+              :comment="review.comment" :color="reviewColor(review)" />
           </div>
         </Transition>
 

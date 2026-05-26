@@ -11,7 +11,7 @@ export const hero = {
     hashtag: '#IGP',
     title: 'App Institucional',
     description:
-        'Accede a la información geofísica más reciente sobre sismos, volcanes y otros fenómenos naturales, generados por el IGP, entidad oficial del Estado peruano encargada de su monitoreo y difusión.',
+        'Accede a la información geocientífica más reciente sobre sismos, volcanes, movimientos en masa y cambio climático, difundida por el IGP, entidad oficial del Estado peruano.',
     ctaLabel: 'Conoce más',
     ctaHref: '#about',
     storeLabel: 'Disponible en:',
@@ -41,22 +41,23 @@ export const about = {
                 'Accede fácilmente a la información del instituto, sus órganos de línea y sus facilidades científicas en un solo lugar.',
         },
         {
-            icon: 'servicios.svg',
-            title: 'Servicios del IGP',
-            description:
-                'Mantente informado mediante reportes y alertas de sismos, volcanes y otros fenómenos geofísicos generados por nuestros servicios institucionales.',
-        },
-        {
             icon: 'accesibilidad.svg',
             title: 'Accesibilidad de usuario',
             description:
-                'Disponible para todos los usuarios en iOS y Android, con opciones de sonido, accesibilidad y widgets interactivos.',
+                'Disponible para iOS y Android, con opciones de personalización y widgets interactivos.',
+        },
+        {
+
+            icon: 'servicios.svg',
+            title: 'Servicios del IGP',
+            description:
+                'Accede de manera inmediata a información técnico-científica reportada por todos nuestros servicios institucionales.',
         },
         {
             icon: 'gestion.svg',
             title: 'Información certificada con ISO',
             description:
-                'Tecnología, monitoreo e información geofísica respaldada por estándares ISO 9001, ISO 37001 e ISO 27001.',
+                'Tecnología, monitoreo e información geofísica respaldada por estándares ISO 9001, ISO 37001 e ISO 27001 ',
         },
     ],
 }
@@ -67,7 +68,7 @@ export const services = {
     title: 'lo que #IGP tiene para ti!',
     strongTitle: '¡Explora todo ',
     description:
-        'Conoce todo lo que puedes encontrar dentro del aplicativo, desde el último sismo hasta las funciones del Planetario Nacional.',
+        'Descubre todo lo que podrás encontrar dentro del aplicativo.',
     cards: [
         {
             id: 1,
@@ -80,7 +81,7 @@ export const services = {
             expandedDescription1:
                 'Infórmate sobre el',
             strongDescription: ' último sismo en el país',
-            expandedDescription2:', consulta reportes sísmicos recientes y mapas sísmicos actualizados.',
+            expandedDescription2: ', consulta reportes sísmicos recientes y mapas sísmicos actualizados.',
             cta: 'Ver más',
         },
         {
@@ -93,8 +94,8 @@ export const services = {
             expandedTitle: 'Centro Vulcanológico Nacional (CENVUL)',
             expandedDescription1:
                 'Infórmate sobre el',
-             strongDescription:' último evento volcánico ',
-             expandedDescription2:'y consulta reportes, boletines, alertas recientes y el estado de cada volcán.',
+            strongDescription: ' último evento volcánico ',
+            expandedDescription2: 'y consulta reportes, boletines, alertas recientes y el estado de cada volcán.',
             cta: 'Ver más',
         },
         {
@@ -103,7 +104,7 @@ export const services = {
             image: 'minicard3.png',
             image1: 'minicard3-1.png',
             image2: 'minicard3-2.png',
-            overlayTitle: 'Explora las últimas publicaciones científicas del IGP.',
+            overlayTitle: 'Explora las últimas publicaciones científicas.',
             expandedTitle: 'Repositorio Geofísico Nacional (REGEN)',
             expandedDescription1:
                 'Explora las',
@@ -131,12 +132,12 @@ export const services = {
             image: 'minicard5.png',
             image1: 'minicard5-1.png',
             image2: 'minicard5-2.png',
-            overlayTitle: 'Consulta reportes acelerométricos de sismos M ≥ 4.5',
+            overlayTitle: 'Consulta reportes acelerométricos',
             expandedTitle: 'ACELDAT PERÚ',
             expandedDescription1:
                 'Visualiza todos los',
-                strongDescription: ' reportes acelerométricos ',
-                expandedDescription2: 'generados tras sismos de magnitud mayor o igual a 4.5.',
+            strongDescription: ' reportes acelerométricos ',
+            expandedDescription2: 'generados tras sismos de magnitud mayor o igual a 4.5.',
             cta: 'Ver más',
         },
         {
@@ -185,44 +186,41 @@ export const faq = {
     items: [
         {
             question: '¿La app móvil #IGP puede alertarme antes de un sismo?',
-            answer: 'No. La aplicación móvil #IGP te notificará de manera inmediata luego de ocurrido un sismo reportado por el Centro Sismológico Nacional (CENSIS). Actualmente, no existe una tecnología capaz de predecir sismos antes de que ocurran.',
+            answer: 'No. La aplicación móvil #IGP te notificará los parámetros hipocentrales del último sismo reportado por el Centro Sismológico Nacional (CENSIS).',
         },
         {
             question: '¿Cuánto tiempo demora en llegar una notificación de sismo?',
-            answer: 'Generalmente, el reporte sísmico es emitido por el CENSIS en un tiempo aproximado de hasta 2 minutos después de ocurrido el evento. Una vez publicado, la información es enviada automáticamente a las plataformas oficiales del IGP, incluyendo redes sociales y el aplicativo móvil.',
+            answer: 'El reporte sísmico es emitido por el CENSIS en un tiempo aproximado de hasta 3 minutos después de ocurrido el evento. Una vez publicado, la información es enviada automáticamente a las plataformas oficiales del IGP, incluyendo redes sociales y el aplicativo móvil.',
         },
         {
             question: '¿La app funciona sin conexión a internet?',
-            answer: 'No. La aplicación requiere conexión a internet para acceder a reportes, alertas, mapas y demás información actualizada en tiempo real.',
+            answer: 'No. La aplicación requiere conexión a internet para acceder todo su contenido.',
         },
         {
             question: '¿Cómo activo las noticias del aplicativo?',
-            answer: 'Por defecto, las notificaciones de #IGP se encuentran activadas. Durante el primer ingreso a la aplicación, el sistema operativo de tu dispositivo solicitará permiso para recibir notificaciones; es importante aceptarlo para poder recibir alertas y reportes. Desde la aplicación, podrás habilitar o deshabilitar las notificaciones según tu preferencia desde la sección de ajustes.',
+            answer: 'Durante el primer ingreso a la aplicación, el sistema operativo de tu dispositivo solicitará permiso para activar y recibir notificaciones. Asimismo, desde la sección de ajustes podrás habilitarlas o deshabilitarlas según tu preferencia.',
         },
         {
             question: '¿Puedo personalizar los sonidos del app?',
-            answer: 'No. #IGP utiliza sonidos preestablecidos para la emisión de reportes y alertas. Esto permite que los usuarios puedan reconocer rápidamente el tipo de notificación, especialmente en caso de eventos sísmicos. Actualmente, la aplicación no cuenta con opciones para personalizar estos sonidos.',
+            answer: 'No. #IGP utiliza sonidos preestablecidos para las notificaciones permitiendo que los usuarios identifiquen rápidamente el sonido del aplicativo, especialmente en caso de eventos sísmicos. ',
         },
+        // {
+        //     question: '¿Puedo recibir notificaciones solo de una región específica?',
+        //     answer: 'Actualmente no. La aplicación está diseñada para informar a todos los usuarios sobre los eventos geofísicos reportados a nivel nacional.',
+        // },
         {
-            question: '¿Puedo recibir notificaciones solo de una región específica?',
-            answer: 'Actualmente no. La aplicación está diseñada para informar a todos los usuarios sobre los eventos geofísicos reportados a nivel nacional.',
-        },
-        {
-            question: '¿Es posible configurar alertas según la magnitud del sismo?',
-            answer: 'No por el momento. El aplicativo móvil reporta todos los sismos emitidos por el Centro Sismológico Nacional, independientemente de su magnitud.',
+            question: '¿Es posible personalizar las notificaciones de los sismos por región o por magnitud?',
+            answer: 'No. La aplicación está diseñada para informar a todos los usuarios sobre los sismos reportados a nivel nacional sin restricción de magnitud.',
         },
         {
             question: '¿Puedo consultar eventos geofísicos anteriores?',
-            answer: 'Sí. La aplicación permite consultar los últimos 50 eventos sísmicos, volcánicos, acelerométricos y publicaciones científicas registradas. Si deseas acceder a información histórica más detallada, podrás ingresar a las plataformas web oficiales de cada servicio desde la misma aplicación.',
+            answer: 'Sí. La aplicación permite visualizar los últimos 50 registros. Para consultar más información, deberás ingresar a la web oficial de cada servicio.',
         },
         {
             question: '¿Puedo comprar entradas para las funciones del Planetario desde #IGP?',
-            answer: 'No. La aplicación está orientada a brindar información institucional, reportes y alertas geofísicas. Sin embargo, podrás acceder directamente al sitio oficial del Planetario Nacional desde la app para consultar funciones y adquirir entradas.',
-        },
-        {
-            question: '¿Puedo visualizar en tiempo real lahares y erupciones volcánicas?',
-            answer: 'No. La aplicación emite reportes y alertas relacionados con actividad volcánica; sin embargo, para acceder al monitoreo especializado y en tiempo real de lahares, volcanes u otros eventos asociados, deberás ingresar a la plataforma web oficial del CENVUL, donde encontrarás información más detallada y herramientas de monitoreo.',
-        },
+            answer: 'No. El aplicativo es únicamente informativo. Para adquirir entradas, deberás ingresar a la plataforma de Joinnus.',
+        }
+
     ]
 }
 

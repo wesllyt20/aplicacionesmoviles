@@ -7,57 +7,64 @@ const base = import.meta.env.BASE_URL
 
 <template>
   <section id="about" class="pt-10 lg:pt-2 overflow-hidden">
-    <div class="max-w-400 mx-auto px-6 lg:px-10 ">
+    <div class="max-w-360 mx-auto px-6 lg:px-10 ">
       <div data-animate class="animate-fade-up flex flex-col items-center text-center">
         <SectionHeading :eyebrow="about.eyebrow" :title="about.title" :titleHighlight="about.titleHighlight" />
         <!-- description -->
         <p class=" text-sm md:text-base text-ink-500 leading-relaxed mt-4">
-          <strong>#IGP</strong> es una aplicativo móvil institucional del Instituto Geofísico del Perú que
-          <strong>centraliza, en un solo lugar, la información de todos <br class="hidden lg:inline">sus servicios</strong>, facilitando que la
-          población, autoridades y profesionales se informen, prevengan riesgos y tomen decisiones oportunas.
+          <strong>#IGP</strong> es una aplicativo móvil del Instituto Geofísico del Perú que
+          <strong>centraliza, en un solo lugar, la información tecnico-cientifica de todos sus <br> servicios</strong>,
+          facilitando que la población, autoridades y profesionales accedan a información oportuna para la prevención y
+          reducción de riesgos.
         </p>
       </div>
 
-      <div class="mt-8 lg:mt-16 grid lg:grid-cols-[1fr_auto_1fr] gap-5 lg:gap-6 items-center">
-        <!-- Left features -->
-        <div class="flex flex-col gap-6 order-2 lg:order-1">
-          <article v-for="(f, i) in about.features.slice(0, 2)" :key="f.title" data-animate
-            :data-animate-delay="i * 150"
-            class="animate-fade-right mt-0 lg:mt-16 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 ">
-            <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
-              <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
-            </div>
-            <div>
-              <h3 class="text-lg font-normal text-brand-700">{{ f.title }}</h3>
-              <p class="text-sm text-ink-500 leading-relaxed mt-1">{{ f.description }}</p>
-            </div>
-          </article>
-        </div>
-
+      <div class="about-showcase mt-8 lg:mt-12">
         <!-- Center: Phone with epicenter pulse -->
-        <div
-          class="relative flex justify-center items-center min-h-90 sm:min-h-120 md:min-h-150 order-1 lg:order-2 animate-scale"
+        <div class="relative flex justify-center items-center min-h-90 sm:min-h-120 lg:min-h-165 animate-scale"
           data-animate data-animate-delay="200">
           <!-- Epicenter pulse rings -->
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+          <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
             <span class="epicenter-ring epicenter-ring--1"></span>
             <span class="epicenter-ring epicenter-ring--2"></span>
             <span class="epicenter-ring epicenter-ring--3"></span>
             <span class="epicenter-ring epicenter-ring--4"></span>
           </div>
 
+          <!-- Desktop feature cards tucked behind the phone -->
+          <div class="hidden lg:block absolute inset-0 z-10 pointer-events-none">
+            <article v-for="(f, i) in about.features" :key="f.title" data-animate
+              :data-animate-delay="i * 120"
+              :class="[
+                'about-card',
+                i < 2 ? 'animate-fade-right about-card--left' : 'animate-fade-left about-card--right',
+                i === 0 ? 'about-card--top-left' : '',
+                i === 1 ? 'about-card--bottom-left' : '',
+                i === 2 ? 'about-card--top-right' : '',
+                i === 3 ? 'about-card--bottom-right' : '',
+              ]">
+              <div class="shrink-0 w-12 h-12 xl:w-14 xl:h-14 rounded-xl bg-brand-700 grid place-items-center ">
+                <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-6 h-6 xl:w-7 xl:h-7 brightness-0 invert" />
+              </div>
+              <div>
+                <h3 class="text-lg font-normal text-brand-700">{{ f.title }}</h3>
+                <p class="text-sm xl:text-base text-ink-500 leading-relaxed mt-2">{{ f.description }}</p>
+              </div>
+            </article>
+          </div>
+
           <!-- Phone image -->
           <img id="imagenCortada" :src="`${base}images/centerphone.png`" alt="App IGP - Pantalla principal" width="380"
             height="700" loading="lazy" decoding="async"
-            class="relative z-10 w-40 sm:w-50 md:w-70  animate-phone-enter border-[#0032FF] border-2 rounded-2xl" />
+            class="relative z-20 w-40 sm:w-50 md:w-70 animate-phone-enter border-[#0032FF] border-2 rounded-2xl" />
         </div>
 
-        <!-- Right features -->
-        <div class="flex flex-col gap-6 order-3 mt-0 lg:mt-24">
-          <article v-for="(f, i) in about.features.slice(2, 4)" :key="f.title" data-animate
-            :data-animate-delay="i * 150 + 300"
-            class="animate-fade-left mt-0 lg:mt-10 flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5 ">
-            <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center shadow-md">
+        <!-- Mobile feature cards -->
+        <div class="lg:hidden mt-8 grid gap-5">
+          <article v-for="(f, i) in about.features" :key="f.title" data-animate
+            :data-animate-delay="i * 120"
+            class="animate-fade-up flex items-start gap-4 bg-white rounded-2xl border border-ink-100 p-5">
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center ">
               <img :src="`${base}icons/${f.icon}`" :alt="f.title" class="w-7 h-7 brightness-0 invert" />
             </div>
             <div>
@@ -72,6 +79,48 @@ const base = import.meta.env.BASE_URL
 </template>
 
 <style scoped>
+.about-showcase {
+  position: relative;
+}
+
+.about-card {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  width: clamp(360px, 37vw, 520px);
+  min-height: 142px;
+  gap: 1rem;
+  padding: 1.45rem 1.75rem;
+  border: 1px solid rgba(11, 16, 32, 0.12);
+  border-radius: 16px;
+}
+
+.about-card--left {
+  right: calc(50% + 72px);
+  padding-right: clamp(3rem, 6vw, 5.5rem);
+}
+
+.about-card--right {
+  left: calc(50% + 72px);
+  padding-left: clamp(4.75rem, 7vw, 6.5rem);
+}
+
+.about-card--top-left {
+  top: 78px;
+}
+
+.about-card--bottom-left {
+  top: 356px;
+}
+
+.about-card--top-right {
+  top: 140px;
+}
+
+.about-card--bottom-right {
+  top: 404px;
+}
+
 /* ── Epicenter pulse animation ── */
 .epicenter-ring {
   position: absolute;

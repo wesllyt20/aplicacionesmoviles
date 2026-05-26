@@ -9,34 +9,36 @@ const base = import.meta.env.BASE_URL
   <section id="download" class="mb-12">
 
     <!-- ── DESKTOP: rounded card with horizontal margins ── -->
-    <div class="hidden lg:block mx-8 xl:mx-16 rounded-3xl overflow-hidden relative h-85">
-      <!-- Background contained inside card -->
-      <div class="absolute inset-0 bg-brand-800"></div>
-      <div class="absolute inset-0 opacity-25"
-        :style="`background-image: url('${base}images/rayas.png'); background-size: cover; background-position: center;`">
-      </div>
+    <div class="hidden lg:block max-w-400 mx-auto px-6 lg:px-10">
+      <div class="rounded-3xl overflow-hidden relative h-85 flex items-center lg:px-20">
+        <!-- Background contained inside card -->
+        <div class="absolute inset-0 bg-brand-800"></div>
+        <div class="absolute inset-0 opacity-25"
+          :style="`background-image: url('${base}images/rayas.png'); background-size: cover; background-position: center;`">
+        </div>
 
-      <!-- Phone image: top-anchored → upper half visible, bottom overflows -->
-      <div data-animate class="animate-fade-right absolute top-0 left-40 z-10 animate-download-float">
-        <img :src="`${base}images/herophones.png`" alt="App #IGP en dispositivos móviles" loading="lazy"
-          decoding="async" class="w-105 xl:w-125 object-contain drop-shadow-2xl pt-10 pl-5" />
-      </div>
+        <!-- Phone image: top-anchored → upper half visible, bottom overflows -->
+        <div data-animate class="animate-fade-right absolute top-0  z-10 animate-download-float">
+          <img :src="`${base}images/herophones.png`" alt="App #IGP en dispositivos móviles" loading="lazy"
+            decoding="async" class="w-105 xl:w-125 object-contain drop-shadow-2xl pt-10 pl-5" />
+        </div>
 
-      <!-- Text + badges: right half, vertically centred -->
-      <div data-animate data-animate-delay="120"
-        class="animate-fade-left absolute inset-y-0 right-0 w-[50%] z-20 flex items-center pr-12 xl:pr-20">
-        <div class="text-white flex items-center justify-center flex-col text-center">
-          <h2 class="text-3xl xl:text-[40px] font-medium tracking-tight leading-tight">
-            Descarga Ahora
-            <span class="font-bold">#IGP</span>
-          </h2>
-          <p class="mt-4  text-base sm:text-2xl font-medium text-white/80 ">
-            {{ cta.subtitle }}
-          </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <StoreBadge store="apple" variant="white" href="https://apps.apple.com/pe/app/igp/id6748286605" />
-            <StoreBadge store="google" variant="white"
-              href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
+        <!-- Text + badges: right half, vertically centred -->
+        <div data-animate data-animate-delay="120"
+          class="animate-fade-left absolute inset-y-0 right-0 w-[50%] z-20 flex items-center pr-12 xl:pr-20">
+          <div class="text-white flex items-center justify-center flex-col text-center">
+            <h2 class="text-3xl xl:text-[40px] font-medium tracking-tight leading-tight">
+              Descarga Ahora
+              <span class="font-bold">#IGP</span>
+            </h2>
+            <p class="mt-4  text-base sm:text-2xl font-medium text-white/80 ">
+              {{ cta.subtitle }}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <StoreBadge store="apple" variant="white" href="https://apps.apple.com/pe/app/igp/id6748286605" />
+              <StoreBadge store="google" variant="white"
+                href="https://play.google.com/store/apps/details?id=app.igps.igpservicios&hl=es_PE" />
+            </div>
           </div>
         </div>
       </div>

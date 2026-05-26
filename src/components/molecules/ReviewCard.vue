@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   name: { type: String, required: true },
   source: { type: String, default: 'Google Play Store' },
   comment: { type: String, required: true },
@@ -9,10 +9,23 @@ defineProps({
 function initial(value) {
   return (value || '?').trim().charAt(0).toUpperCase()
 }
+
+function hexToRgba(hex, alpha) {
+  const normalized = (hex || props.color).replace('#', '')
+  const value = normalized.length === 3
+    ? normalized.split('').map((char) => char + char).join('')
+    : normalized
+  const number = Number.parseInt(value, 16)
+  const r = (number >> 16) & 255
+  const g = (number >> 8) & 255
+  const b = number & 255
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
 </script>
 
 <template>
-  <article class="break-inside-avoid mb-5 rounded-2xl border border-ink-100 bg-white p-5 shadow-[0_2px_8px_-6px_rgba(15,23,42,0.1)]">
+  <article class="rounded-lg border p-4"
+    :style="{ backgroundColor: hexToRgba(color, 0.03), borderColor: hexToRgba(color, 0.08) }">
     <header class="flex items-center gap-3 mb-3">
       <div
         class="w-10 h-10 rounded-full grid place-items-center text-white font-semibold"

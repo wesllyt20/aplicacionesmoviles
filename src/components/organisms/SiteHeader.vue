@@ -16,9 +16,7 @@ function smoothScroll(e, href) {
   isOpen.value = false
   const el = document.querySelector(href)
   if (el) {
-    const headerHeight = document.querySelector('header')?.offsetHeight ?? 72
-    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight
-    window.scrollTo({ top, behavior: 'smooth' })
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 }
 </script>
@@ -26,7 +24,7 @@ function smoothScroll(e, href) {
 <template>
   <header class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
     :class="[y > 40 ? 'bg-white border-b border-gray-200' : '']">
-    <div class="max-w-400 mx-auto px-6 lg:px-10 py-4 flex items-center justify-between gap-6">
+    <div class="max-w-360 mx-auto px-6 lg:px-10 py-4 flex items-center justify-between gap-6">
       <!-- Left logos -->
       <div class="flex items-center gap-4">
         <img :src="y > 40 ? `${$baseUrl}logos/minam.png` : `${$baseUrl}logos/dark-minam.webp`" alt="Ministerio del Ambiente" width="120" height="36"

@@ -9,7 +9,7 @@ defineProps({
 <template>
   <a :href="href" target="_blank" rel="noopener"
     :aria-label="store === 'google' ? 'Descargar en Google Play' : 'Descargar en App Store'"
-    class="inline-flex items-center  rounded-2xl px-4 py-1.5 h- transition-all duration-200 hover:-translate-y-0.5 select-none  w-auto sm:w-48.75]! h-fit sm:h-14.25"
+    class="inline-flex items-center  rounded-2xl px-4 py-1.5 h- transition-all duration-200 hover:-translate-y-0.5 select-none  w-auto sm:w-52.25  h-fit sm:h-14.25"
     :class="variant === 'white'
       ? 'bg-white text-ink-900 border border-ink-200 shadow-sm hover:shadow-md'
       : 'bg-black/30 text-white border border-white/30 backdrop-blur-sm hover:bg-black/40'">
