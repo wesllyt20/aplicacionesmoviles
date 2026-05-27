@@ -107,9 +107,9 @@ export const services = {
             overlayTitle: 'Explora las últimas publicaciones científicas.',
             expandedTitle: 'Repositorio Geofísico Nacional (REGEN)',
             expandedDescription1:
-                'Explora las',
+                'Explora nuestras',
             strongDescription: ' últimas publicaciones ',
-            expandedDescription2: 'de los científicos y profesionales del IGP y de las comunidades geofísicas en nuestro repositorio.',
+            expandedDescription2: 'e informes sobre estudios en geociencias desarrollados en nuestro país.',
             cta: 'Ver más',
         },
         {
@@ -149,7 +149,7 @@ export const services = {
             overlayTitle: 'Conoce toda la información geoespacial del IGP.',
             expandedTitle: 'Infraestructura de Datos Espaciales (IDE)',
             expandedDescription1:
-                'Consulta información geoespacial sobre fenómenos geofísicos a través de nuestro portal IDE IGP.',
+                'Consulta información geoespacial sobre fenómenos geofísicos a través de nuestro portal IDE.',
             strongDescription: '',
             expandedDescription2: '',
             cta: 'Ver más',

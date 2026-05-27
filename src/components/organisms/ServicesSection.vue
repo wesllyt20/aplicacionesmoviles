@@ -48,8 +48,7 @@ function getOverlayTitleLines(card) {
       <div data-animate class="animate-fade-up text-center">
         <SectionHeading :eyebrow="services.eyebrow" :title="services.title" :strongTitle="services.strongTitle" />
         <p class=" text-sm md:text-base text-ink-500 leading-relaxed mt-4">
-          Conoce todo lo que puedes encontrar dentro del aplicativo, desde el último sismo hasta las funciones del
-          Planetario Nacional.
+          Descubre todo lo que podrás encontrar dentro del aplicativo.
         </p>
       </div>
 
@@ -89,7 +88,7 @@ function getOverlayTitleLines(card) {
               <div class="p-5 flex flex-col justify-center h-full">
                 <img :src="`${base}icons/${card.icon}`" :alt="card.expandedTitle"
                   class="w-11 h-11 lg:w-16 lg:h-16 mb-3 border-black/10 border rounded-lg p-1" />
-                <h3 class="text-base font-bold text-ink-900 leading-snug mb-2">{{ card.expandedTitle }}</h3>
+                <h3 class="text-base font-medium text-ink-900 leading-snug mb-2">{{ card.expandedTitle }}</h3>
                 <p class="text-xs lg:text-sm text-ink-500 ">{{ card.expandedDescription1 }}
                   <strong>{{ card.strongDescription }}</strong>{{ card.expandedDescription2 }}
                 </p>
