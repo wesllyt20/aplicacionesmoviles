@@ -8,7 +8,7 @@ export default defineConfig(function ({ mode }) {
   return {
   plugins: [vue(), tailwindcss()],
 
-  base: env.APP_BASE || '/',
+  base: '/',
 
   server: {
     port: Number(env.VITE_PORT) || 5173,

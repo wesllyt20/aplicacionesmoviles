@@ -24,7 +24,7 @@ function hexToRgba(hex, alpha) {
 </script>
 
 <template>
-  <article class="rounded-lg border p-4"
+  <article class="rounded-lg  p-4"
     :style="{ backgroundColor: hexToRgba(color, 0.03), borderColor: hexToRgba(color, 0.08) }">
     <header class="flex items-center gap-3 mb-3">
       <div
