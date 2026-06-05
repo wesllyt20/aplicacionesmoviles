@@ -35,7 +35,7 @@ function hexToRgba(hex, alpha) {
       </div>
       <div class="flex flex-col leading-tight">
         <span class="text-sm font-semibold text-ink-900">{{ name }}</span>
-        <span class="text-xs text-ink-400">{{ source }}</span>
+        <span class="text-xs text-[#222222]">{{ source }}</span>
       </div>
     </header>
     <p class="text-sm text-ink-500 leading-relaxed">{{ comment }}</p>

@@ -71,7 +71,7 @@ function getOverlayTitleLines(card) {
                   </span>
                 </h3>
                 <div
-                  class="inline-flex w-fit mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-2 text-sm font-semibold">
+                  class="inline-flex w-fit mt-4 items-center gap-2 border border-white/80 rounded-lg px-4 py-2 text-sm sm:text-base font-semibold">
                   {{ card.cta }}
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />

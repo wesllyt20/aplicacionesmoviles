@@ -192,7 +192,7 @@
 
               <div class="leading-tight">
                 <span
-                  class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Disponible
+                  class="block text-[10px] tracking-wider text-slate-400 group-hover:text-slate-300">Disponible
                   en</span>
                 <span class="block text-sm font-bold text-white">Google Play</span>
               </div>
@@ -209,7 +209,7 @@
 
               <div class="leading-tight">
                 <span
-                  class="block text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-slate-300">Descarga
+                  class="block text-[10px]  tracking-wider text-slate-400 group-hover:text-slate-300">Disponible
                   en</span>
                 <span class="block text-sm font-bold text-white">App Store</span>
               </div>
@@ -221,16 +221,16 @@
     <!-- Copyright -->
     <div class="mt-6 md:mt-10 py-6 border-t bg-[#0A1738] border-slate-700/50 text-sm  text-igp-white">
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-4 text-center justify-center">
         <p>
           &copy; {{ new Date().getFullYear() }} Instituto Geofísico del Perú.
           Todos los derechos reservados.
         </p>
-        <div class="flex gap-6">
+        <!-- <div class="flex gap-6">
           <a href="#" class="hover:text-slate-300 transition-colors text-xs">Política de privacidad</a>
           <a href="#" class="hover:text-slate-300 transition-colors text-xs">Términos de uso</a>
           <a href="#" class="hover:text-slate-300 transition-colors text-xs">Accesibilidad</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>

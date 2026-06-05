@@ -11,7 +11,7 @@ export const hero = {
     hashtag: '#IGP',
     title: 'App Institucional',
     description:
-        'Accede a la información geocientífica más reciente sobre sismos, volcanes, movimientos en masa y cambio climático, difundida por el IGP, entidad oficial del Estado peruano.',
+        'Accede a la información geocientífica más reciente sobre sismos, volcanes, movimientos en masa y cambio climático difundida por el IGP, entidad oficial del Estado peruano.',
     ctaLabel: 'Conoce más',
     ctaHref: '#about',
     storeLabel: 'Disponible en:',
@@ -29,7 +29,7 @@ export const stats = [
 // ─── ACERCA DE #IGP ─────────────────────────────────────────
 export const about = {
     eyebrow: 'Acerca de #IGP',
-    title: 'Todo el IGP en ',
+    title: 'El IGP en ',
     titleHighlight: 'un solo lugar',
     description:
         '#IGP es una aplicación móvil institucional del Instituto Geofísico del Perú que centraliza, en un solo lugar, la información de todos sus servicios, facilitando que la población, autoridades y profesionales se informen, prevengan riesgos y tomen decisiones oportunas.',
@@ -38,7 +38,7 @@ export const about = {
             icon: 'informacion_institucional.svg',
             title: 'Información institucional',
             description:
-                'Accede fácilmente a la información del instituto, sus órganos de línea y sus facilidades científicas en un solo lugar.',
+                'Accede a nuestras líneas de Investigación en geociencias, servicios y facilidades científicas.',
         },
         {
             icon: 'accesibilidad.svg',
@@ -197,7 +197,7 @@ export const faq = {
             answer: 'No. La aplicación requiere conexión a internet para acceder todo su contenido.',
         },
         {
-            question: '¿Cómo activo las noticias del aplicativo?',
+            question: '¿Cómo activo las notificaciones del aplicativo?',
             answer: 'Durante el primer ingreso a la aplicación, el sistema operativo de tu dispositivo solicitará permiso para activar y recibir notificaciones. Asimismo, desde la sección de ajustes podrás habilitarlas o deshabilitarlas según tu preferencia.',
         },
         {
@@ -213,8 +213,8 @@ export const faq = {
             answer: 'No. La aplicación está diseñada para informar a todos los usuarios sobre los sismos reportados a nivel nacional sin restricción de magnitud.',
         },
         {
-            question: '¿Puedo consultar eventos geofísicos anteriores?',
-            answer: 'Sí. La aplicación permite visualizar los últimos 50 registros. Para consultar más información, deberás ingresar a la web oficial de cada servicio.',
+            question: '¿Puedo consultar sobre otros fenómenos naturales?',
+            answer: 'Sí, solo debes ingresar a la web de cada servicio institucional.',
         },
         {
             question: '¿Puedo comprar entradas para las funciones del Planetario desde #IGP?',
