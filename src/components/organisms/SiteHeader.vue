@@ -30,7 +30,7 @@ function smoothScroll(e, href) {
         <img :src="y > 40 ? `${$baseUrl}logos/minam.png` : `${$baseUrl}logos/dark-minam.webp`" alt="Ministerio del Ambiente" width="120" height="36"
           class="h-9 w-44 sm:w-auto hidden sm:block" />
           <img :src="y > 40 ? `${$baseUrl}logos/responsive_minam.png` : `${$baseUrl}logos/dark_responsive_minam.png`" alt="Ministerio del Ambiente" width="120" height="36"
-          class="h-9 w-fit sm:w-auto sm:hidden" />
+          class="h-9 w-auto sm:hidden" />
         <img :src="y > 40 ? `${$baseUrl}logos/igp.png` : `${$baseUrl}logos/dark-igp.webp`" alt="Instituto Geofísico del Perú" width="120" height="36"
           class="hidden sm:block h-9 w-auto" />
         <img :src="y > 40 ? `${$baseUrl}logos/responsive_igp.png` : `${$baseUrl}logos/dark_responsive_igp.png`" alt="IGP" class="sm:h-10 h-8 sm:hidden" />
