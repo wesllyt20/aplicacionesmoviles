@@ -34,7 +34,7 @@ function smoothScroll(e, href) {
         <img :src="y > 40 ? `${$baseUrl}logos/igp.png` : `${$baseUrl}logos/dark-igp.webp`" alt="Instituto Geofísico del Perú" width="120" height="36"
           class="hidden sm:block h-9 w-auto" />
         <img :src="y > 40 ? `${$baseUrl}logos/responsive_igp.png` : `${$baseUrl}logos/dark_responsive_igp.png`" alt="IGP" class="sm:h-10 h-8 sm:hidden" />
-        <img :src="y > 40 ? `${$baseUrl}logos/aniversario.png` : `${$baseUrl}logos/dark_aniversario.png`" alt="Aniversario" class="sm:h-10 h-8" />
+        <!-- <img :src="y > 40 ? `${$baseUrl}logos/aniversario.png` : `${$baseUrl}logos/dark_aniversario.png`" alt="Aniversario" class="sm:h-10 h-8" /> -->
       </div>
 
       <!-- Desktop nav -->
